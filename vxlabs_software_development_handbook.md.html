@@ -1,0 +1,105 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://morgan3d.github.io/markdeep/latest/slate.css?">
+
+                        **The vxlabs software development handbook**
+                        Version 2020-12-14
+                        by Dr Charl P. Botha <cpbotha@vxlabs.com>
+
+This is the open source vxlabs software development handbook.
+
+It countains a number of best practices for building mostly web-based software
+using Python on the backend and TypeScript for the frontend.
+
+I'm making this available under the BSD 3-clause open source license in case
+you find any part of this useful. Feel free to pick what works for you, and
+ignore the rest.
+
+Keywords: best practices, code style, coding conventions, programming style
+
+Introduction
+================================================================================
+
+General
+================================================================================
+
+Prefer TypeScript over JavaScript
+--------------------------------------------------------------------------------
+
+Git
+================================================================================
+
+Python
+================================================================================
+
+Use poetry for package and dependency management
+--------------------------------------------------------------------------------
+
+Use the black formatter with line-length 120
+--------------------------------------------------------------------------------
+
+The black formatter documentation makes good arguments for line length 88,
+including that it's more than 80 (can't argue with that), but perhaps most
+importantly that longer line lengths could be problematic for folks with sight
+difficulties.
+
+However, because display resolution and quality are steadily increasing, and
+because we often find, in the more technical code bases we work with, that we
+need more horizontal space for a *more* readable layout, we have decided to
+compromise with 120 characters maximum per line for all our code.
+
+Add this to your `pyproject.toml` to change the default to 120:
+
+``` toml
+[tool.black]
+# change black's default from 88 characters to 120 characters
+line-length = 120
+```
+
+You will also need to change the `max-line-length` rule in your flake8
+config. See below.
+
+Use flake8 to check your Python as you work
+--------------------------------------------------------------------------------
+
+`.flake8`
+
+``` config
+[flake8]
+max-line-length = 120
+import-order-style = google
+docstring-convention = numpy
+# https://black.readthedocs.io/en/stable/the_black_code_style.html#slices
+ignore = E203
+```
+
+
+Use cell-based debug scripts
+--------------------------------------------------------------------------------
+
+`test_*` and `debug_*`
+
+
+TypeScript
+================================================================================
+
+Use the prettier formatter with line-length 120
+--------------------------------------------------------------------------------
+
+Add the following to your `.prettierrc.json`:
+
+``` javascript
+{
+    "printWidth": 120
+}
+```
+
+Configure your IDE or editor to run prettier automatically on save:
+
+### Visual Studio Code
+
+Install the ["Prettier - Code formatter" extension (extension id:
+`esbenp.prettier-vscode`)](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
+
+Activate `editor.formatOnSave`.
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
