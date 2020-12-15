@@ -88,16 +88,21 @@ Use cell-based debug scripts
 TypeScript
 ================================================================================
 
-Use the prettier formatter with line-length 120
+Use the prettier formatter
 --------------------------------------------------------------------------------
 
-Add the following to your `.prettierrc.json`:
+Using an opinionated and automatic code formatter like
+[prettier](https://prettier.io/) saves you time, because you don't have to
+think about formatting anymore, and perhaps more importantly, you don't have to
+debate about it with anyone.
 
-``` javascript
-{
-    "printWidth": 120
-}
-```
+[prettier recommends against any other `printWidth` than
+80](https://prettier.io/docs/en/options.html#print-width), because their
+algorithm does not treat it as a maximum length, but rather as a desired
+length.
+
+Due to this limitation, and because TypeScript is different from Python, here
+we recommend going with prettier's defaults.
 
 Configure your IDE or editor to run prettier automatically on save:
 
