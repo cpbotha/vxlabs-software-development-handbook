@@ -57,7 +57,7 @@ Commit messages generally stop at the first line, but that means many people
 somehow manage to break the first five of the seven rules, so at least pay
 careful attention to the example's first line.
 
-```
+``` text
 Summarize changes in around 50 characters or less
 
 More detailed explanatory text, if necessary. Wrap it to about 72
@@ -138,6 +138,41 @@ Use cell-based debug scripts
 
 `test_*` and `debug_*`
 
+Prefer Django even for tiny services
+--------------------------------------------------------------------------------
+
+Django is the highest quality Python web-framework.
+
+It comes with almost all batteries included, it is exhaustively tested and it
+is well-documented.
+
+Importantly, it is quite opinionated, meaning that you don't have to waste time
+deciding on alternative solutions for aspects of your back-end. The solutions
+are already all there, and they've been battle-tested. However, many of these
+components can be swapped out if you really want to.
+
+The Django ORM by itself is worth the price of admission.
+
+In addition to all of that, the large and active community means that:
+
+1. The strange behaviour you're seeing in your app has already been explored,
+   documented and fixed by someone else. Just search.
+2. There are multiple libraries and configurations for any possible requirement
+   you might have.
+
+Sometimes people operate on the assumption that Django is somehow too large for
+a small service, and then choose some other smaller-appearing framework.
+
+Why would you do this?
+
+If you use a subset of Django's functionality, it becomes a smaller framework
+in memory and in complexity.
+
+However, in future you have the option of switching on any of the built-in
+functionality when the project requirements change.
+
+To summarize: Choose Django, unless you have really good and really specific
+reasons not to do so.
 
 TypeScript
 ================================================================================
