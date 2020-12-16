@@ -138,7 +138,7 @@ Use cell-based debug scripts
 
 `test_*` and `debug_*`
 
-Prefer Django even for tiny services
+Prefer Django
 --------------------------------------------------------------------------------
 
 Django is the highest quality Python web-framework.
@@ -173,6 +173,24 @@ functionality when the project requirements change.
 
 To summarize: Choose Django, unless you have really good and really specific
 reasons not to do so.
+
+### What about FastAPI?
+
+We have used FastAPI in the past for a machine learning project that required
+asynchronous operation (for pushing results via websockets to the interactive
+web frontend) but did not require a database component or any user
+authentication.
+
+Although our experience with this impressive piece of software was great, our
+Django products have seen many more users and many more years of stable
+operation.
+
+Furthermore, since then [Django 3.1 has gained many more async
+capabilities](https://docs.djangoproject.com/en/3.1/topics/async/). Faced with
+the same requirements today, we might choose differently.
+
+Again, choose Django, unless you have really good and really specific reasons
+not to do so.
 
 TypeScript
 ================================================================================
