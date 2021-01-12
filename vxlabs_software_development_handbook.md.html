@@ -1,7 +1,7 @@
 <meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://morgan3d.github.io/markdeep/latest/apidoc.css?">
 
                         **The vxlabs software development handbook**
-                        Version 2020-12-14, [rendered version](https://cpbotha.github.io/vxlabs-software-development-handbook/vxlabs_software_development_handbook.md.html), [github repo](https://github.com/cpbotha/vxlabs-software-development-handbook)
+                        Version 2021-01-12, [rendered version](https://cpbotha.github.io/vxlabs-software-development-handbook/vxlabs_software_development_handbook.md.html), [github repo](https://github.com/cpbotha/vxlabs-software-development-handbook)
                         by Dr Charl P. Botha <cpbotha@vxlabs.com>
 
 This is the open source vxlabs software development handbook.
@@ -18,6 +18,7 @@ Keywords: best practices, code style, coding conventions, programming style
 Introduction
 ================================================================================
 
+
 General
 ================================================================================
 
@@ -27,6 +28,10 @@ Comment your code
 - Where and how does this module fit into the whole product?
 - Why exactly is this implemented in a surprising way?
 - How does this non-trivial algorithm work?
+
+Use automated testing
+--------------------------------------------------------------------------------
+
 
 Prefer TypeScript over JavaScript
 --------------------------------------------------------------------------------
@@ -138,7 +143,8 @@ ignore = E203
 Use cell-based debug scripts
 --------------------------------------------------------------------------------
 
-`test_*` and `debug_*`
+Follow the convention that all tests (we use pytest) are in files named
+`test_*.py`, and debug and test scripts are named `debug_*.py`.
 
 Prefer Django
 --------------------------------------------------------------------------------
