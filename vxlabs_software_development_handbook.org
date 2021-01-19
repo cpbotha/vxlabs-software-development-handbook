@@ -1,0 +1,303 @@
+#+TITLE: vxlabs software development handbook
+#+DATE: 2021-01-19
+#+AUTHOR_not: Dr Charl P. Botha <cpbotha@vxlabs.com>
+#+AUTHOR:
+
+#+HUGO_BASE_DIR: ../../../../web/vxlabs.com/
+#+HUGO_SECTION: post/2021
+
+#+EXPORT_FILE_NAME: index.md
+#+HUGO_BUNDLE: vxlabs-software-development-handbook
+#+HUGO_URL: /software-development-handbook/
+
+#+HUGO_CATEGORIES: handbook
+#+HUGO_TAGS: software
+
+# when exporting to hugo, need author here. for other exports, re-enable AUTHOR above
+# the problem is that ox-hugo usually exports author array: https://ox-hugo.scripter.co/doc/author/
+#+HUGO_CUSTOM_FRONT_MATTER: :author "Dr Charl P. Botha" :org true
+#+HUGO_AUTO_SET_LASTMOD: t
+
+#+HUGO_DRAFT: true
+
+This is the open source vxlabs software development handbook.
+
+It countains a number of best practices for building mostly web-based
+software using Python on the backend and TypeScript for the frontend.
+
+I'm making this available under the BSD 3-clause open source license in
+case you find any part of this useful. Feel free to pick what works for
+you, and ignore the rest.
+
+Keywords: best practices, code style, coding conventions, programming
+style
+
+* Introduction
+  :PROPERTIES:
+  :CUSTOM_ID: introduction
+  :END:
+* General
+  :PROPERTIES:
+  :CUSTOM_ID: general
+  :END:
+** Comment your code
+   :PROPERTIES:
+   :CUSTOM_ID: comment-your-code
+   :END:
+
+- Where and how does this module fit into the whole product?
+- Why exactly is this implemented in a surprising way?
+- How does this non-trivial algorithm work?
+- Bonus points if you can add an example to the comments!
+
+** Ensure your README can ramp-up news devs
+   :PROPERTIES:
+   :CUSTOM_ID: ensure-your-readme-can-ramp-up-news-devs
+   :END:
+** Use automated testing
+   :PROPERTIES:
+   :CUSTOM_ID: use-automated-testing
+   :END:
+** Prefer TypeScript over JavaScript
+   :PROPERTIES:
+   :CUSTOM_ID: prefer-typescript-over-javascript
+   :END:
+* Git
+  :PROPERTIES:
+  :CUSTOM_ID: git
+  :END:
+** Follow the 7 rules of writing good commit messages
+   :PROPERTIES:
+   :CUSTOM_ID: follow-the-7-rules-of-writing-good-commit-messages
+   :END:
+See [[https://chris.beams.io/posts/git-commit/][this blog post by Chris Beams]] with the motivation and background of these
+rules.
+
+I repeat the rules below for your convenience:
+
+1. Separate subject from body with a blank line
+2. Limit the subject line to 50 characters
+3. Capitalize the subject line
+4. Do not end the subject line with a period
+5. Use the imperative mood in the subject line
+6. Wrap the body at 72 characters
+7. Use the body to explain what and why vs. how
+
+The post by Beams contains a great example of a rather extensive git
+commit message that I reproduce below, also for your convenience.
+
+Commit messages generally stop at the first line, but that means many
+people somehow manage to break the first five of the seven rules, so at
+least pay careful attention to the example's first line.
+
+#+begin_example
+  Summarize changes in around 50 characters or less
+
+  More detailed explanatory text, if necessary. Wrap it to about 72
+  characters or so. In some contexts, the first line is treated as the
+  subject of the commit and the rest of the text as the body. The
+  blank line separating the summary from the body is critical (unless
+  you omit the body entirely); various tools like `log`, `shortlog`
+  and `rebase` can get confused if you run the two together.
+
+  Explain the problem that this commit is solving. Focus on why you
+  are making this change as opposed to how (the code explains that).
+  Are there side effects or other unintuitive consequences of this
+  change? Here's the place to explain them.
+
+  Further paragraphs come after blank lines.
+
+   - Bullet points are okay, too
+
+   - Typically a hyphen or asterisk is used for the bullet, preceded
+     by a single space, with blank lines in between, but conventions
+     vary here
+
+  If you use an issue tracker, put references to them at the bottom,
+  like this:
+
+  Resolves: #123
+  See also: #456, #789
+#+end_example
+
+** Rebase feature branches for review and merging
+
+** Apply merge request checklist
+
+From https://twitter.com/pablosaraiva/status/1350386465138728961
+
+Before a merge request can be merged, the following has to be checked:
+
+The request:
+
+1. Changes a single thing;
+2. Has a good title;
+3. Has a link to the ticket;
+4. Was peer reviewed;
+
+In addition:
+
+5. Build and tests pass;
+6. Static code analysis pass;
+7. Code changes are simple to understand;
+8. Things that need documentation are documented;
+9. Code has test coverage.
+
+* Usability
+  :PROPERTIES:
+  :CUSTOM_ID: usability
+  :END:
+
+- Steve Krug
+- design guidelines + opinionated toolkit
+
+* Python
+  :PROPERTIES:
+  :CUSTOM_ID: python
+  :END:
+** Type annotate all the things
+   :PROPERTIES:
+   :CUSTOM_ID: type-annotate-all-the-things
+   :END:
+** Use poetry for package and dependency management
+   :PROPERTIES:
+   :CUSTOM_ID: use-poetry-for-package-and-dependency-management
+   :END:
+** Use the black formatter with defaults
+   :PROPERTIES:
+   :CUSTOM_ID: use-the-black-formatter-with-defaults
+   :END:
+The
+[[https://black.readthedocs.io/en/stable/the_black_code_style.html#line-length][black
+formatter documentation makes good arguments for line length 88]],
+including that it's more than 80 (can't argue with that), but perhaps
+most importantly that longer line lengths could be problematic for folks
+with sight difficulties.
+
+Furthermore, sticking to the formatter default means one fewer setting
+that has to be modified.
+
+** Use flake8 to check your Python as you work
+   :PROPERTIES:
+   :CUSTOM_ID: use-flake8-to-check-your-python-as-you-work
+   :END:
+Configure your IDE to apply flake8 checks continuously as you work.
+
+We prefer the google import style (grouped from built-in to third-party,
+sorted within groups), and numpy docstrings.
+
+The following =.flake8=, to be installed in the root directory of your
+project, takes care of what's mentioned here.
+
+#+begin_example
+  [flake8]
+  max-line-length = 88
+  import-order-style = google
+  docstring-convention = numpy
+  # https://black.readthedocs.io/en/stable/the_black_code_style.html#slices
+  ignore = E203
+#+end_example
+
+** Use cell-based debug scripts
+   :PROPERTIES:
+   :CUSTOM_ID: use-cell-based-debug-scripts
+   :END:
+Follow the convention that all tests (we use pytest) are in files named
+=test_*.py=, and debug and test scripts are named =debug_*.py=.
+
+** Prefer Django
+   :PROPERTIES:
+   :CUSTOM_ID: prefer-django
+   :END:
+Django is the highest quality Python web-framework.
+
+It comes with almost all batteries included, it is exhaustively tested
+and it is well-documented.
+
+Importantly, it is quite opinionated, meaning that you don't have to
+waste time deciding on alternative solutions for aspects of your
+back-end. The solutions are already all there, and they've been
+battle-tested. However, many of these components can be swapped out if
+you really want to.
+
+The Django ORM by itself is worth the price of admission.
+
+In addition to all of that, the large and active community means that:
+
+1. The strange behaviour you're seeing in your app has already been
+   explored, documented and fixed by someone else. Just search.
+2. There are multiple libraries and configurations for any possible
+   requirement you might have.
+
+Sometimes people operate on the assumption that Django is somehow too
+large for a small service, and then choose some other smaller-appearing
+framework.
+
+Why would you do this?
+
+If you use a subset of Django's functionality, it becomes a smaller
+framework in memory and in complexity.
+
+However, in future you have the option of switching on any of the
+built-in functionality when the project requirements change.
+
+To summarize: Choose Django, unless you have really good and really
+specific reasons not to do so.
+
+*** What about FastAPI?
+    :PROPERTIES:
+    :CUSTOM_ID: what-about-fastapi
+    :END:
+We have used [[https://fastapi.tiangolo.com/][FastAPI]] in the past for
+a machine learning project that required asynchronous operation (for
+pushing results via websockets to the interactive web frontend) but did
+not require a database component or any user authentication.
+
+Although our experience with this impressive piece of software was
+great, our Django products have seen many more users and many more years
+of stable operation.
+
+Furthermore, since then
+[[https://docs.djangoproject.com/en/3.1/topics/async/][Django 3.1 has
+gained many more async capabilities]]. Faced with the same requirements
+today, we might choose differently.
+
+Again, choose Django, unless you have really good and really specific
+reasons not to do so.
+
+* React
+  :PROPERTIES:
+  :CUSTOM_ID: react
+  :END:
+* TypeScript
+  :PROPERTIES:
+  :CUSTOM_ID: typescript
+  :END:
+** Use the prettier formatter
+   :PROPERTIES:
+   :CUSTOM_ID: use-the-prettier-formatter
+   :END:
+Using an opinionated and automatic code formatter like
+[[https://prettier.io/][prettier]] saves you time, because you don't
+have to think about formatting anymore, and perhaps more importantly,
+you don't have to debate about it with anyone.
+
+[[https://prettier.io/docs/en/options.html#print-width][prettier
+recommends against any other =printWidth= than 80]], because their
+algorithm does not treat it as a maximum length, but rather as a desired
+length.
+
+Due to this limitation, and because TypeScript is different from Python,
+here we recommend going with prettier's defaults.
+
+Configure your IDE or editor to run prettier automatically on save:
+
+*** Visual Studio Code
+    :PROPERTIES:
+    :CUSTOM_ID: visual-studio-code
+    :END:
+Install the
+[[https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode]["Prettier -
+Code formatter" extension (extension id: =esbenp.prettier-vscode=)]].
+
+Activate =editor.formatOnSave=.
