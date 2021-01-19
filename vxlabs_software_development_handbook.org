@@ -29,10 +29,12 @@ I'm making this available under the BSD 3-clause open source license in
 case you find any part of this useful. Feel free to pick what works for
 you, and ignore the rest.
 
-...
-
-Keywords: best practices, code style, coding conventions, programming
-style
+- Status: This handbook is about 30% complete on 2021-01-19. The plan is to
+  pass 75% (whatever that may mean) before the end of January, 2021.
+- Canonical URL: https://vxlabs.com/software-development-handbook/
+- Github: https://github.com/cpbotha/vxlabs-software-development-handbook
+- Keywords: best practices, code style, coding conventions, programming
+  style
 
 * Introduction
   :PROPERTIES:
