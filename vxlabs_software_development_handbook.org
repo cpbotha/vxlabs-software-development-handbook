@@ -29,6 +29,8 @@ I'm making this available under the BSD 3-clause open source license in
 case you find any part of this useful. Feel free to pick what works for
 you, and ignore the rest.
 
+...
+
 Keywords: best practices, code style, coding conventions, programming
 style
 
@@ -122,9 +124,23 @@ least pay careful attention to the example's first line.
 
 ** Rebase feature branches for review and merging
 
-** Apply merge request checklist
+** Before merging, apply the merge request checklist
 
-From https://twitter.com/pablosaraiva/status/1350386465138728961
+From the following Tweet by [[https://twitter.com/pablosaraiva][pablosaraiva]]:
+
+#+begin_export html
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">- Changes a single
+thing;<br>- Has a good tittle;<br>- Has a link to the ticket;<br>- Was pair
+reviewed;<br>- Build and tests pass;<br>- Static code analysis pass
+(sonarqube);<br>- Code changes are simple to understand;<br>- Things that need
+documentation are documented;<br>- Code has test coverage.</p>&mdash;
+pablosaraiva (@pablosaraiva) <a
+href="https://twitter.com/pablosaraiva/status/1350386465138728961?ref_src=twsrc%5Etfw">January
+16, 2021</a></blockquote> <script async
+src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+#+end_export
+
+We reproduce the following fixed version:
 
 Before a merge request can be merged, the following has to be checked:
 
