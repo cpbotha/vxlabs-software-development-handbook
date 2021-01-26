@@ -11,7 +11,7 @@
 #+HUGO_URL: /software-development-handbook/
 
 #+HUGO_CATEGORIES: handbook
-#+HUGO_TAGS: software
+#+HUGO_TAGS: best practices, code style, coding conventions, programming style, software development
 
 # when exporting to hugo, need author here. for other exports, re-enable AUTHOR above
 # the problem is that ox-hugo usually exports author array: https://ox-hugo.scripter.co/doc/author/
@@ -20,60 +20,74 @@
 
 #+HUGO_DRAFT: true
 
-This is the open source vxlabs software development handbook.
-
-It countains a number of best practices for building mostly web-based
-software using Python on the backend and TypeScript for the frontend.
-
-I'm making this available under the BSD 3-clause open source license in
-case you find any part of this useful. Feel free to pick what works for
-you, and ignore the rest.
-
-- Status: This handbook is about 30% complete on 2021-01-19. The plan is to
-  pass 75% (whatever that may mean) before the end of January, 2021.
-- Canonical URL: https://vxlabs.com/software-development-handbook/
-- Github: https://github.com/cpbotha/vxlabs-software-development-handbook
-- Keywords: best practices, code style, coding conventions, programming
-  style
 
 * Introduction
-  :PROPERTIES:
-  :CUSTOM_ID: introduction
-  :END:
+
+This is the *heavily in-progress* open source vxlabs software development
+handbook.
+
+It contains a number of best practices for building software, generally
+web-based, using Python on the backend and TypeScript for the frontend. owever,
+most of the guidelines should be more broadly applicable.
+
+I am making this available under the BSD 3-clause open source license in case
+you find any part of this useful. Feel free to pick what works for you, and
+ignore the rest.
+
+- Status: This handbook is about 30% complete on 2021-01-25. The plan is to
+  get a complete v1 posted in Q1 of 2021.
+- Canonical URL: https://vxlabs.com/software-development-handbook/
+- Github: https://github.com/cpbotha/vxlabs-software-development-handbook
+
 * General
-  :PROPERTIES:
-  :CUSTOM_ID: general
-  :END:
+
 ** Comment your code
-   :PROPERTIES:
-   :CUSTOM_ID: comment-your-code
-   :END:
+
+The most obvious mark of good programmers is that they write good code.
+
+What sets /great engineers/ apart from good programmers, is that, in addition
+to building beautiful systems, they have a continuous and long-lasting positive
+effect on the capabilities of those around them.
+
+In other words, a great engineer helps team-mates to level-up.
+
+One of the best ways to help your team-mates, current and future, to be better
+at their work, is to comment your code.
+
+Put yourselves in the shoes of a future team-mate who is most probably going to
+have to understand your code to add a new feature to the system, or to fix a
+bug.
+
+The less time they spend understanding your code, the more time they'll have to
+do their work well.
+
+Give them as much high-quality context as you can in the comments.
+
+Try to answer questions like:
 
 - Where and how does this module fit into the whole product?
 - Why exactly is this implemented in a surprising way?
 - How does this non-trivial algorithm work?
-- Bonus points if you can add an example to the comments!
+
+Bonus points if you can add an example of usage to the comments!
+
+This is really not about you believing that your code speaks for itself.
+
+Instead think about your future team-mates who will either be really happy with
+the guidance you give them, or perhaps a great deal less happy with the extra
+hours they were forced to spend in order to divine your willfully undocumented
+intentions.
+
+** Use automated testing
 
 ** Ensure your README can ramp-up news devs
-   :PROPERTIES:
-   :CUSTOM_ID: ensure-your-readme-can-ramp-up-news-devs
-   :END:
-** Use automated testing
-   :PROPERTIES:
-   :CUSTOM_ID: use-automated-testing
-   :END:
+
 ** Prefer TypeScript over JavaScript
-   :PROPERTIES:
-   :CUSTOM_ID: prefer-typescript-over-javascript
-   :END:
+
 * Git
-  :PROPERTIES:
-  :CUSTOM_ID: git
-  :END:
+
 ** Follow the 7 rules of writing good commit messages
-   :PROPERTIES:
-   :CUSTOM_ID: follow-the-7-rules-of-writing-good-commit-messages
-   :END:
+
 See [[https://chris.beams.io/posts/git-commit/][this blog post by Chris Beams]] with the motivation and background of these
 rules.
 
@@ -142,7 +156,7 @@ href="https://twitter.com/pablosaraiva/status/1350386465138728961?ref_src=twsrc%
 src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 #+end_export
 
-We reproduce the following fixed version:
+Following is a fixed and grouped version of the checklist.
 
 Before a merge request can be merged, the following has to be checked:
 
@@ -227,6 +241,7 @@ Follow the convention that all tests (we use pytest) are in files named
    :PROPERTIES:
    :CUSTOM_ID: prefer-django
    :END:
+
 Django is the highest quality Python web-framework.
 
 It comes with almost all batteries included, it is exhaustively tested
