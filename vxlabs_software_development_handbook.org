@@ -110,13 +110,17 @@ intentions.
 
 ** Use automated testing
 
-** Ensure your README can ramp-up new devs
+** Ensure your top-level README can ramp-up new devs
 
 ** Prefer TypeScript over JavaScript
 
 * Version control (with git)
 
 ** Follow the 7 rules of writing good commit messages
+:PROPERTIES:
+:CUSTOM_ID: good-commit-messages
+:END:
+
 
 See [[https://chris.beams.io/posts/git-commit/][this blog post by Chris Beams]] with the motivation and background of these
 rules.
@@ -168,9 +172,84 @@ least pay careful attention to the example's first line.
   See also: #456, #789
 #+end_example
 
-** Rebase feature branches for review and merging
+** Rebase feature branches before review and before merging
+:PROPERTIES:
+:CUSTOM_ID: rebase-before-merging
+:END:
 
-** Apply gitflow
+Rebasing before review and again before merging, with a merge commit, results
+in a more linear git history where each feature branch is clearly separated
+from the feature branchs before and after it.
+
+When this rebasing approach is combined with [[#good-commit-messages][writing good commit messages]], your
+git history becomes a usable and, importantly, linear hierarchical record of
+which changes happened when, both at the commit level, and at the feature
+level.
+
+Below an example is shown from a real project employing [[#gitflow][gitflow]] and the
+rebase-before-merge guideline.
+
+Note that each discrete feature occupies its own horizontal duration with no
+overlaps. Furthermore, each feature branch is ended by a merge commit which
+contains more information about that feature.
+
+#+CAPTION: Linear hierarchical history thanks to rebasing before merging.
+#+CAPTION: Merge commits in each case contain more information about the feature and metadata like the PR reviewers.
+[[file:magit-rebase-good-history.png][file:magit-rebase-good-history.png]]
+
+In exceptional cases, it /can/ happen (but it shouldn't) that a feature branch
+has grown so complex to make a rebase prohibitively difficult. In these cases,
+after this has been discussed with the team lead, one could consider merging
+=develop= into the feature branch instead of rebasing. However, this should be
+considered a last exit.
+
+** Use gitflow for versioned software releases
+:PROPERTIES:
+:CUSTOM_ID: gitflow
+:END:
+
+The [[https://nvie.com/posts/a-successful-git-branching-model/][original gitflow branching model was published by Vincent Driessen on his
+blog]].
+
+Please go read the whole post as soon as you can make some time.
+
+Until then, refer to one of Driessen's great diagrams below, and follow these
+updated and highly paraphrased instructions:
+
+- Your git repo has at least two major branches: =develop= and =main=.
+- Every new feature, bug fix or task is developed in a feature branch, branched
+  from =develop=.
+- (After the pull request and review process,) that feature branch will be merged
+  back into develop.
+  - We add here the extra requirement that the feature branch is rebased from
+    master before review, and again before merging, see [[#rebase-before-merging][rebase-before-merging]]
+    above.
+- When you are preparing for a release, create a new branch of =develop= and
+  work on that until ready for release.
+  - Tag the specific commit that makes it into release.
+- After release, and hopefully fame and fortune, merge the =release-= branch in
+  question back into =develop=, and also, quite importantly into =main=.
+  - In other words, =main= is always production-ready code.
+- If you ever need to make an urgent hotfix to a production release, branch
+  from production-ready =main= and prepare hotfix release.
+  - Once the hotfix release is done, merge back into =main= and into =develop=.
+  
+#+CAPTION: aoeu
+#+ATTR_HTML: :width 320
+[[file:gitflow_hotfixbranch_nvie.com.png][file:gitflow_hotfixbranch_nvie.com.png]]
+
+Please do take note of Driessen's update of March 5, 2020, where he recommends
+that gitflow should not be treated as dogma.
+
+It's a guideline that is to be adapted for your situation.
+
+** Use GitHub flow for continuous delivery
+
+If your team does continuous delivery, i.e. not fully versioned software
+releases, consider a simpler model than gitflow, for example [[https://guides.github.com/introduction/flow/][GitHub flow]].
+
+My experience is mostly with versioned software releases and gitflow, so I'm
+keeping this section short.
 
 ** Before merging, apply the merge request checklist
 
