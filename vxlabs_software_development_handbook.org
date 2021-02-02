@@ -75,16 +75,20 @@ If you're able to increase your score by any number, you're doing good work.
 
 The most obvious mark of good programmers is that they write good code.
 
-What sets /great engineers/ apart from good programmers, is that, in addition
+What sets /great programmers/ apart from good programmers, is that, in addition
 to building beautiful systems, they have a continuous and long-lasting positive
 effect on the capabilities of those around them.
 
-In other words, a great engineer helps team-mates to level-up.
+In other words, a great programmer /helps team-mates to level-up/.
 
-One of the best ways to help your team-mates, current and future, to be better
-at their work, is to comment your code.
+In this way, great programmers continuously amplify the quality and output of
+their whole team. In these cases, "10x" is perhaps not even that much of an
+exaggeration.
 
-Put yourselves in the shoes of a future team-mate who is most probably going to
+One of the best ways that /you/ can help your team-mates, current and future,
+to be better at their work, is to comment your code.
+
+Put yourself in the shoes of a future team-mate who is most probably going to
 have to understand your code to add a new feature to the system, or to fix a
 bug.
 
@@ -107,6 +111,8 @@ Instead think about your future team-mates who will either be really happy with
 the guidance you give them, or perhaps a great deal less happy with the extra
 hours they were forced to spend in order to divine your willfully undocumented
 intentions.
+
+Be kind. Comment your code.
 
 ** Use automated testing
 
@@ -234,7 +240,7 @@ updated and highly paraphrased instructions:
   from production-ready =main= and prepare hotfix release.
   - Once the hotfix release is done, merge back into =main= and into =develop=.
   
-#+CAPTION: aoeu
+#+CAPTION: The gitflow model, including develop, master (now main), release branches and hotfixes.
 #+ATTR_HTML: :width 320
 [[file:gitflow_hotfixbranch_nvie.com.png][file:gitflow_hotfixbranch_nvie.com.png]]
 
