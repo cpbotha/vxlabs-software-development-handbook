@@ -72,6 +72,9 @@ If you're able to increase your score by any number, you're doing good work.
 
 
 ** Comment your code
+:PROPERTIES:
+:CUSTOM_ID: comment-your-code
+:END:
 
 The most obvious mark of good programmers is that they write good code.
 
@@ -119,6 +122,38 @@ Be kind. Comment your code.
 ** Ensure your top-level README can ramp-up new devs
 
 ** Prefer TypeScript over JavaScript
+
+This is what it states [[https://www.typescriptlang.org/][on the tin]]:
+
+#+begin_quote
+TypeScript extends JavaScript by adding types.
+
+By understanding JavaScript, TypeScript saves you time catching errors and
+providing fixes before you run code.
+#+end_quote
+
+From my practical experience, after years of as-modern-as-possible JavaScript
+and initially /resisting/ the perceived extra burden of using TypeScript,
+TypeScript improves the quality of our products by:
+
+1. Augmenting our code documentation with rich and structured information about
+   the exact nature of data going in and out of functions.
+2. Enabling IDE tooling to give much better interactive assistance as we
+   work. In other words, the IDE is able to surface and /apply/ the
+   typing-information that has been specified previously.
+3. Enabling tooling, both IDE and off-line checks, to catch typing and other
+   errors in their tracks.
+
+The general arguments for [[#comment-your-code][commenting your code]] up above also hold for using
+TypeScript instead of JavaScript. By doing this, you can help your team-mates,
+current and future, to be better. (You'll probably also be helping future you
+at some point.)
+
+As if that's not enough, here's some social proof:
+
+In the 2020 Stack Overflow developer survey, [[https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-loved][TypeScript had moved all the way
+up to the second position, right below Rust, on the list of /most loved/
+languages]].
 
 * Version control (with git)
 
