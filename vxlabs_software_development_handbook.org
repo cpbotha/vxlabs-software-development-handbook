@@ -331,9 +331,25 @@ In addition:
 9. Code has test coverage.
 
 * Usability
-  
-- Steve Krug
-- design guidelines + opinionated toolkit
+
+** Read and absorb Steve Krug's "Don't make me think"
+
+This book is a great introduction to website (and to a large extent general UI)
+usability that gives insight into the mind of that very mysterious being,
+namely "the user".
+
+If you don't have time at this moment to read this compact book, you could read
+my book notes in the meantime. (to be published)
+
+- [ ] mention usability testing
+
+** Pick and use a design system and accompanying toolkit
+
+- [ ] state problem: we are almost all engineering
+- [ ] motivate design system + toolkit as engineer-friendly solution for
+  practical usability
+
+We use [[https://material.io/design][Material Design]] along with [[https://material-ui.com/][material-ui]] for our React frontends.
 
 * Python
   
