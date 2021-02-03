@@ -459,8 +459,6 @@ today, we might choose differently.
 Again, choose Django, unless you have really good and really specific
 reasons not to do so.
 
-* React
-
 * TypeScript
 
 ** Use eslint and configure your IDE to apply it continuously
@@ -490,3 +488,6 @@ Install the [[https://marketplace.visualstudio.com/items?itemName=esbenp.prettie
 =esbenp.prettier-vscode=)]].
 
 Activate =editor.formatOnSave=.
+
+* React
+
