@@ -1,5 +1,5 @@
 #+TITLE: vxlabs software development handbook
-#+DATE: 2021-02-01
+#+DATE: 2021-02-03
 #+AUTHOR_not: Dr Charl P. Botha <cpbotha@vxlabs.com>
 #+AUTHOR:
 
@@ -33,7 +33,7 @@ I am making this available under the BSD 3-clause open source license in case
 you find any part of this useful. Feel free to pick what works for you, and
 ignore the rest.
 
-- Status: This handbook is about 35% complete on 2021-02-01. The plan is to
+- Status: *This handbook is about 40% complete on 2021-02-03*. The plan is to
   get a complete v1 posted in Q1 of 2021.
 - Canonical URL: https://vxlabs.com/software-development-handbook/
 - Github: https://github.com/cpbotha/vxlabs-software-development-handbook
@@ -122,6 +122,9 @@ Be kind. Comment your code.
 ** Ensure your top-level README can ramp-up new devs
 
 ** Prefer TypeScript over JavaScript
+:PROPERTIES:
+:CUSTOM_ID: typescript-over-javascript
+:END:
 
 This is what it states [[https://www.typescriptlang.org/][on the tin]]:
 
@@ -336,6 +339,32 @@ In addition:
   
 ** Type annotate all the things
 
+The same three arguments as for [[#typescript-over-javascript][Prefer TypeScript]] up above hold for Python type
+annotation.
+
+In short, type annotation in Python is structured, human- and
+machine-understandable type information that enriches your documentation, can
+be used by IDEs to assist you and your team-mates in writing code, and can be
+used by IDEs and offline tools such as mypy to help catch bugs before they
+happen.
+
+During the Python Language Summit 2020, [[https://pyfound.blogspot.com/2020/04/the-path-forward-for-typing-python.html][Guido van Rossum remarked that since
+2014, when Python type annotations were introduced, ten type-checking PEPs have
+been approved]].
+
+As an additional example, the Apache Beam project is quite assertive in its
+post introducing improved annotation for their Python SDK (emphasis mine):
+
+#+begin_quote
+The *importance of static type checking in a dynamically typed language like
+Python is not up for debate*. Type hints allow developers to leverage a strong
+typing system to:
+
+- write better code,
+- self-document ambiguous programming logic, and
+- inform intelligent code completion in IDEs like PyCharm.
+#+end_quote
+
 ** Use poetry for package and dependency management
 
 ** Use the black formatter with defaults
@@ -433,6 +462,10 @@ reasons not to do so.
 * React
 
 * TypeScript
+
+** Use eslint and configure your IDE to apply it continuously
+
+** Group your imports
 
 ** Use the prettier formatter
 
