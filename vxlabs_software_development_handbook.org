@@ -120,6 +120,9 @@ Be kind. Comment your code.
 ** Use automated testing
 
 ** Use automated linting
+:PROPERTIES:
+:CUSTOM_ID: linting
+:END:
 
 From [[https://en.wikipedia.org/wiki/Lint_(software)][the Wikipedia page on the topic]]:
 
@@ -506,7 +509,40 @@ reasons not to do so.
 :CUSTOM_ID: eslint
 :END:
 
-This is following 
+[[https://eslint.org/][eslint]] is currently the best linter for your TypeScript.
+
+As suggested in the general [[#linting][guideline]] above, everyone on your team should have
+eslint configured and running continuously as they work on TypeScript code.
+
+You could start with some recommended rules for typescript by setting up you
+=.eslintrc= like this:
+
+#+begin_src javascript
+  {
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["@typescript-eslint"],
+      "extends": ["plugin:@typescript-eslint/recommended"]
+  }
+#+end_src
+
+Make sure that you have eslint and all relevant plugins installed.
+
+[[https://community.dynamics.com/crm/b/develop1/posts/always-be-linting-your-typescript][This post]] contains a good starter example if you're also using React.
+
+*** Visual Studio Code
+
+Install [[https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint][the =dbaeumer.vscode-eslint= extension]] for continuous application of
+eslint to your code.
+
+*** What about tslint?
+
+After some time using the purpose-built /tslint/ for our TypeScript codebases,
+I was surprised to discover that [[https://github.com/typescript-eslint/typescript-eslint#what-about-tslint][tslint was being sunsetted, and that
+significant effort had been put into upgrading eslint to replace tslint as the
+premier TypeScript linter]].
+
+In fact, the TypeScript team themselves had [[https://github.com/microsoft/TypeScript/issues/30553][switched to using eslint on the
+main TypeScript repo]].
 
 ** Group your imports
 
