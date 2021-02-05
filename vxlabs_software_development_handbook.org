@@ -119,6 +119,27 @@ Be kind. Comment your code.
 
 ** Use automated testing
 
+** Use automated linting
+
+From [[https://en.wikipedia.org/wiki/Lint_(software)][the Wikipedia page on the topic]]:
+
+#+begin_quote
+lint, or a linter, is a static code analysis tool used to flag programming
+errors, bugs, stylistic errors, and suspicious constructs. The term originates
+from a Unix utility that examined C language source code.
+#+end_quote
+
+Many modern languages have great linters available.
+
+Ensure that you have these configured and active for your whole team, ideally
+directly in the IDE so that programmers get continuous and real-time feedback
+on the quality of the code that they are writing so that that they can further
+improve their work.
+
+See [[#flake8][flake8 for Python]] and [[#eslint][eslint for TypeScript]] below for specific examples.
+
+** Use automated formatting
+
 ** Ensure your top-level README can ramp-up new devs
 
 ** Prefer TypeScript over JavaScript
@@ -394,6 +415,9 @@ Furthermore, sticking to the formatter default means one fewer setting
 that has to be modified.
 
 ** Use flake8 to check your Python as you work
+:PROPERTIES:
+:CUSTOM_ID: flake8
+:END:
 
 Configure your IDE to apply flake8 checks continuously as you work.
 
@@ -478,6 +502,11 @@ reasons not to do so.
 * TypeScript
 
 ** Use eslint and configure your IDE to apply it continuously
+:PROPERTIES:
+:CUSTOM_ID: eslint
+:END:
+
+This is following 
 
 ** Group your imports
 
