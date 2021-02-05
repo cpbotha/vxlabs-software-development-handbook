@@ -27,7 +27,9 @@ handbook.
 
 It contains a number of best practices for building software, generally
 web-based, using Python on the backend and TypeScript for the
-frontend. However, most of the guidelines should be more broadly applicable.
+frontend.
+
+However, most of the guidelines are more broadly applicable.
 
 I am making this available under the BSD 3-clause open source license in case
 you find any part of this useful. Feel free to pick what works for you, and
@@ -365,7 +367,7 @@ namely "the user".
 If you don't have time at this moment to read this compact book, you could read
 my book notes in the meantime. (to be published)
 
-- [ ] mention usability testing
+- [ ] usability testing
 
 ** Pick and use a design system and accompanying toolkit
 
@@ -405,7 +407,13 @@ typing system to:
 - inform intelligent code completion in IDEs like PyCharm.
 #+end_quote
 
-** Use poetry for package and dependency management
+** Prefer poetry for managing project and product dependencies
+
+- reproducible builds
+
+** Consider Conda for managing data-science and R&D dependencies
+
+https://docs.conda.io/en/latest/miniconda.html
 
 ** Use the black formatter with defaults
 
