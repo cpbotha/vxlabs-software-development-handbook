@@ -72,7 +72,6 @@ These are some of /the/ core characteristics of a great software process.
 
 If you're able to increase your score by any number, you're doing good work.
 
-
 ** Comment your code
 :PROPERTIES:
 :CUSTOM_ID: comment-your-code
@@ -81,8 +80,8 @@ If you're able to increase your score by any number, you're doing good work.
 The most obvious mark of good programmers is that they write good code.
 
 What sets /great programmers/ apart from good programmers, is that, in addition
-to building beautiful systems, they have a continuous and long-lasting positive
-effect on the capabilities of those around them.
+to building beautiful and understandable systems, they have a continuous and
+long-lasting positive effect on the capabilities of those around them.
 
 In other words, a great programmer /helps team-mates to level-up/.
 
@@ -107,6 +106,7 @@ Try to answer questions like:
 - Where and how does this module fit into the whole product?
 - Why exactly is this implemented in a surprising way?
 - How does this non-trivial algorithm work?
+- Which otherwise most suitable methods did you *not* use, and why?
 
 Bonus points if you can add an example of usage to the comments!
 
@@ -119,7 +119,25 @@ intentions.
 
 Be kind. Comment your code.
 
+** Have a project README.md that can get new devs up to speed
+
+** Maintain a project architecture description
+
+- https://matklad.github.io/2021/02/06/ARCHITECTURE.md.html
+- https://news.ycombinator.com/item?id=26048784
+
 ** Use automated testing
+
+- https://martinfowler.com/testing/
+- note the test pyramid: many fast unit tests, fewer integration tests, even
+  fewer e2e tests. This is a balancing act between fast test cycles times for
+  rapid iteration vs confidence that the product works as it should.
+- coverage is good to monitor, but it can be misleading, e.g. a large suite of
+  only unit tests can give 100% coverage but has nothing to say about
+  integration and end-to-end use of your product.
+  - Measure and study failure models and their impact, create tests that target
+    them specifically. In short, apply scientific method when designing test
+    suite.
 
 ** Use automated linting
 :PROPERTIES:
@@ -144,8 +162,6 @@ improve their work.
 See [[#flake8][flake8 for Python]] and [[#eslint][eslint for TypeScript]] below for specific examples.
 
 ** Use automated formatting
-
-** Ensure your top-level README can ramp-up new devs
 
 ** Prefer TypeScript over JavaScript
 :PROPERTIES:
