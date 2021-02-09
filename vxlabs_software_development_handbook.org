@@ -35,6 +35,10 @@ I am making this available under the BSD 3-clause open source license in case
 you find any part of this useful. Feel free to pick what works for you, and
 ignore the rest.
 
+Important note: These are only /guidelines/. They were never meant to be
+applied dogmatically. They are great when you are starting fresh, and their
+intentions are good, but please do understand and adapt to your situation.
+
 - Status: *This handbook is about 60% complete on 2021-02-09*. The plan is to
   get a complete v1 posted in Q1 of 2021. Sections that are marked =TODO= are,
   ahem, in progress.
