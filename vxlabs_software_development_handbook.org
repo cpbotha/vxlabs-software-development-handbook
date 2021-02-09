@@ -36,7 +36,8 @@ you find any part of this useful. Feel free to pick what works for you, and
 ignore the rest.
 
 - Status: *This handbook is about 60% complete on 2021-02-09*. The plan is to
-  get a complete v1 posted in Q1 of 2021.
+  get a complete v1 posted in Q1 of 2021. Sections that are marked =TODO= are,
+  ahem, in progress.
 - Canonical URL: https://vxlabs.com/software-development-handbook/
 - Github: https://github.com/cpbotha/vxlabs-software-development-handbook
 
@@ -138,7 +139,7 @@ documenation, such as [[#architecture-description][the architecture description]
 For inspiration, take a look at some of the readmes on the [[https://github.com/matiassingers/awesome-readme][Awesome README
 curated list]].
 
-** Maintain a project architecture description
+** TODO Maintain a project architecture description
 :PROPERTIES:
 :CUSTOM_ID: architecture-description
 :END:
@@ -146,7 +147,7 @@ curated list]].
 - https://matklad.github.io/2021/02/06/ARCHITECTURE.md.html
 - https://news.ycombinator.com/item?id=26048784
 
-** Use automated testing
+** TODO Use automated testing
 
 - https://martinfowler.com/testing/
 - note the test pyramid: many fast unit tests, fewer integration tests, even
@@ -181,7 +182,7 @@ improve their work.
 
 See [[#flake8][flake8 for Python]] and [[#eslint][eslint for TypeScript]] below for specific examples.
 
-** Use automated formatting
+** TODO Use automated formatting
 
 ** Prefer TypeScript over JavaScript
 :PROPERTIES:
@@ -399,7 +400,7 @@ In addition:
 
 * Usability
 
-** Read and absorb Steve Krug's "Don't make me think"
+** TODO Read and absorb Steve Krug's "Don't make me think"
 
 This book is a great introduction to website (and to a large extent general UI)
 usability that gives insight into the mind of that very mysterious being,
@@ -410,7 +411,7 @@ my book notes in the meantime. (to be published)
 
 - [ ] usability testing
 
-** Pick and use a design system and accompanying toolkit
+** TODO Pick and use a design system and accompanying toolkit
 
 - [ ] state problem: we are almost all engineering
 - [ ] motivate design system + toolkit as engineer-friendly solution for
@@ -448,11 +449,11 @@ typing system to:
 - inform intelligent code completion in IDEs like PyCharm.
 #+end_quote
 
-** Prefer poetry for managing project and product dependencies
+** TODO Prefer poetry for managing project and product dependencies
 
 - reproducible builds
 
-** Consider Conda for managing data-science and R&D dependencies
+** TODO Consider Conda for managing data-science and R&D dependencies
 
 https://docs.conda.io/en/latest/miniconda.html
 
@@ -488,7 +489,7 @@ project, takes care of what's mentioned here.
   ignore = E203
 #+end_example
 
-** Use cell-based debug scripts
+** TODO Use cell-based debug scripts
 
 Follow the convention that all tests (we use pytest) are in files named
 =test_*.py=, and debug and test scripts are named =debug_*.py=.
@@ -619,5 +620,5 @@ Install the [[https://marketplace.visualstudio.com/items?itemName=esbenp.prettie
 
 Activate =editor.formatOnSave=.
 
-* React
+* TODO React
 
