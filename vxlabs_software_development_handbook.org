@@ -1,5 +1,5 @@
 #+TITLE: vxlabs software development handbook
-#+DATE: 2021-02-05
+#+DATE: 2021-02-09
 #+AUTHOR_not: Dr Charl P. Botha <cpbotha@vxlabs.com>
 #+AUTHOR:
 
@@ -35,7 +35,7 @@ I am making this available under the BSD 3-clause open source license in case
 you find any part of this useful. Feel free to pick what works for you, and
 ignore the rest.
 
-- Status: *This handbook is about 60% complete on 2021-02-05*. The plan is to
+- Status: *This handbook is about 60% complete on 2021-02-09*. The plan is to
   get a complete v1 posted in Q1 of 2021.
 - Canonical URL: https://vxlabs.com/software-development-handbook/
 - Github: https://github.com/cpbotha/vxlabs-software-development-handbook
