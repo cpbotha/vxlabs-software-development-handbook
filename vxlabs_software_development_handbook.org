@@ -145,6 +145,7 @@ curated list]].
 :END:
 
 - https://matklad.github.io/2021/02/06/ARCHITECTURE.md.html
+  - recommended to review and update a few times a year
 - https://news.ycombinator.com/item?id=26048784
 
 ** TODO Use automated testing
