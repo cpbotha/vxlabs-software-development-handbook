@@ -577,7 +577,10 @@ You could start with some recommended rules for typescript by setting up you
 
 Make sure that you have eslint and all relevant plugins installed.
 
-[[https://community.dynamics.com/crm/b/develop1/posts/always-be-linting-your-typescript][This post]] contains a good starter example if you're also using React.
+- [[https://github.com/Sarghm/typescript-eslint-prettier-template][This TypeScript 4, ESLint & Prettier Project Template]] shows how to extend the
+  above with prettier formatter support, which [[#prettier][we recommend below]].
+- If you're also using React, combine the above with the example from [[https://community.dynamics.com/crm/b/develop1/posts/always-be-linting-your-typescript][this
+  post]].
 
 *** Visual Studio Code
 
@@ -597,14 +600,17 @@ main TypeScript repo]].
 ** Group your imports
 
 ** Use the prettier formatter
+:PROPERTIES:
+:CUSTOM_ID: prettier
+:END:
+
 
 Using an opinionated and automatic code formatter like
 [[https://prettier.io/][prettier]] saves you time, because you don't
 have to think about formatting anymore, and perhaps more importantly,
 you don't have to debate about it with anyone.
 
-[[https://prettier.io/docs/en/options.html#print-width][prettier
-recommends against any other =printWidth= than 80]], because their
+[[https://prettier.io/docs/en/options.html#print-width][prettier recommends against any other =printWidth= than 80]], because their
 algorithm does not treat it as a maximum length, but rather as a desired
 length.
 
