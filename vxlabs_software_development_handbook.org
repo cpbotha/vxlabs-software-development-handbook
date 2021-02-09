@@ -168,6 +168,11 @@ See [[#flake8][flake8 for Python]] and [[#eslint][eslint for TypeScript]] below 
 :CUSTOM_ID: typescript-over-javascript
 :END:
 
+(This sounds like strangely specific advice in the "General" section. However,
+because so much frontend code is being written today, and because the
+JavaScript to TypeScript path is now so well-trodden, I have decided to add
+this here.)
+
 This is what it states [[https://www.typescriptlang.org/][on the tin]]:
 
 #+begin_quote
