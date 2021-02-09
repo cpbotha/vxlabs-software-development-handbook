@@ -121,7 +121,27 @@ Be kind. Comment your code.
 
 ** Have a project README.md that can get new devs up to speed
 
+When new developers join your team, it usually takes a substantial chunk of
+time to ramp them up.
+
+Consider investing some of that time into ensuring that your =README.md= has
+all of the necessary steps to get a new developer up to speed instead.
+
+Next time this happens, say "welcome!" and point them at the readme! They'll be
+able to help themselves, only coming to you with more specific questions, which
+you can use to further improve the readme.
+
+In addition to the getting started information, the project =README.md= should
+also contain a brief description of the project, and links to other relevant
+documenation, such as [[#architecture-description][the architecture description]].
+
+For inspiration, take a look at some of the readmes on the [[https://github.com/matiassingers/awesome-readme][Awesome README
+curated list]].
+
 ** Maintain a project architecture description
+:PROPERTIES:
+:CUSTOM_ID: architecture-description
+:END:
 
 - https://matklad.github.io/2021/02/06/ARCHITECTURE.md.html
 - https://news.ycombinator.com/item?id=26048784
