@@ -230,7 +230,32 @@ improve their work.
 
 See [[#flake8][flake8 for Python]] and [[#eslint][eslint for TypeScript]] below for specific examples.
 
-** TODO Use automated formatting
+** Use automatic code formatting
+
+Back in the day, we used to entertain ourselves with multi-year arguments as to
+the best placement of the opening brace in C.
+
+Fortunately, many languages now have automatic formatting tools that offer one
+(and only sometimes more than one) preset.
+
+See for example [[https://golang.org/cmd/gofmt/][gofmt]], [[https://github.com/rust-lang/rustfmt][rustfmt]], black and prettier.
+
+Using such tools means no more arguments about formatting, and no more manually
+looking up and applying a coding standard document, so that developers can
+focus on writing /logic/ that is beautiful.
+
+Ideally these tools are integrated into IDEs, and are automatically applied
+whenever a file is saved.
+
+They can also be integrated with [[#ci-pipelines][CI pipelines]], as one of the checks before a
+pull request is merged.
+
+** TODO Setup automated CI pipelines with as much code quality checks as possible
+:PROPERTIES:
+:CUSTOM_ID: ci-pipelines
+:END:
+
+formatting, type-checking, linting, building, test suite
 
 ** Prefer TypeScript over JavaScript
 :PROPERTIES:
