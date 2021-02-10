@@ -156,14 +156,14 @@ curated list]].
   - recommended to review and update a few times a year
 - https://news.ycombinator.com/item?id=26048784
 
-** TODO Use automated testing
+** Use automated testing
 
-It is clear that having a well-designed suite of automated testing that can be
-executed during development, before features are merged, after features are
-merged and especially before releases will ensure that your project or product
-works the way that you intend it to.
+In 2021, it has become clear that having a well-designed suite of automated
+testing that can be executed during development, before features are merged,
+after features are merged and especially before releases will ensure that your
+project or product works the way that you intend it to.
 
-This becomes exponentially more important as your code grows and as your team
+This becomes exponentially more important as your code grows, and as your team
 grows.
 
 Martin Fowler maintains a [[https://martinfowler.com/testing/][brilliant online collection of testing resources]] with
@@ -174,18 +174,28 @@ Do take note of [[https://martinfowler.com/articles/practical-test-pyramid.html]
 /unit tests/ at the bottom, fewer /integration tests/ in the layer above that,
 and even fewer /end-to-end tests/ at the top.
 
-This is a balancing act between fast test cycles times for rapid development
-iteration (i.e. developer running tests continuously as they work) vs.  high
-confidence that the complete product /functions/ exactly as it should.
+This is a balancing act between fast test cycle times for rapid development
+iteration (i.e. developer running tests continuously as they work) vs. higher
+confidence that the complete product /functions/ exactly as it should, as can
+be demonstrated by end-to-end tests.
 
-Note:
+** Be scientific when deciding what to test
 
-- coverage is good to monitor, but it can be misleading, e.g. a large suite of
-  only unit tests can give 100% coverage but has nothing to say about
-  integration and end-to-end use of your product.
-  - In other words: Measure and study failure models and their impact, create
-    tests that target them specifically. In short, apply scientific method when
-    designing test suite.
+Some teams get so caught up in maximizing code coverage, that they end up
+writing a great number of unit tests in order to do so.
+
+When that product comes into contact with the first user, there is a high
+probability that it will fail embarrassingly.
+
+The moral of this story is that while it's good to monitor coverage as one of
+your testing metrics, it is far more important to /measure and study failure
+models and their impact/, and to use these observations to design tests that
+specifically target expected real-world failures, and to do so according to
+expected impact.
+
+In other words, having a few end-to-end tests that prove that your product's
+main user flows work could easily be more valuable than writing a bunch of
+additional unit tests.
 
 ** Use automated linting
 :PROPERTIES:
