@@ -29,10 +29,6 @@ frontend.
 
 However, most of the guidelines are more broadly applicable.
 
-I am making this available under the BSD 3-clause open source license in case
-you find any part of this useful. Feel free to pick what works for you, and
-ignore the rest.
-
 Important note: These are only /guidelines/. They were never meant to be
 applied dogmatically. They are great when you are starting fresh, and their
 intentions are good, but please do understand and adapt to your situation.
@@ -42,6 +38,21 @@ intentions are good, but please do understand and adapt to your situation.
   ahem, in progress.
 - Canonical URL: https://vxlabs.com/software-development-handbook/
 - Github: https://github.com/cpbotha/vxlabs-software-development-handbook
+
+
+*/License/*
+
+#+begin_export html
+<a rel="license"
+href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons
+License" style="border-width:0"
+src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /> I am making
+this handbook available under the <a rel="license"
+href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution
+4.0 International License</a> in case you find any part of this useful and
+would like to re-use, also commercially. The only requirement is that you give
+appropriate credit (author, link back to this site, and so on).
+#+end_export
 
 */Table of Contents/*
 
