@@ -158,16 +158,34 @@ curated list]].
 
 ** TODO Use automated testing
 
-- https://martinfowler.com/testing/
-- note the test pyramid: many fast unit tests, fewer integration tests, even
-  fewer e2e tests. This is a balancing act between fast test cycles times for
-  rapid iteration vs confidence that the product works as it should.
+It is clear that having a well-designed suite of automated testing that can be
+executed during development, before features are merged, after features are
+merged and especially before releases will ensure that your project or product
+works the way that you intend it to.
+
+This becomes exponentially more important as your code grows and as your team
+grows.
+
+Martin Fowler maintains a [[https://martinfowler.com/testing/][brilliant online collection of testing resources]] with
+much more detail about the different types of tests and practical approaches to
+testing.
+
+Do take note of [[https://martinfowler.com/articles/practical-test-pyramid.html][the test pyramid]]: Usually you'll have a larger number of fast
+/unit tests/ at the bottom, fewer /integration tests/ in the layer above that,
+and even fewer /end-to-end tests/ at the top.
+
+This is a balancing act between fast test cycles times for rapid development
+iteration (i.e. developer running tests continuously as they work) vs.  high
+confidence that the complete product /functions/ exactly as it should.
+
+Note:
+
 - coverage is good to monitor, but it can be misleading, e.g. a large suite of
   only unit tests can give 100% coverage but has nothing to say about
   integration and end-to-end use of your product.
-  - Measure and study failure models and their impact, create tests that target
-    them specifically. In short, apply scientific method when designing test
-    suite.
+  - In other words: Measure and study failure models and their impact, create
+    tests that target them specifically. In short, apply scientific method when
+    designing test suite.
 
 ** Use automated linting
 :PROPERTIES:
