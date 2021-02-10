@@ -193,9 +193,9 @@ models and their impact/, and to use these observations to design tests that
 specifically target expected real-world failures, and to do so according to
 expected impact.
 
-In other words, having a few end-to-end tests that prove that your product's
-main user flows work could easily be more valuable than writing a bunch of
-additional unit tests.
+In other words, designing a few end-to-end tests that prove that your product's
+main user flows function exactly as you intended is probably a better time
+investment than writing a bunch of additional unit tests.
 
 ** Use automated linting
 :PROPERTIES:
