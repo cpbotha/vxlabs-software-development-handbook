@@ -1,5 +1,5 @@
 #+TITLE: vxlabs software development handbook
-#+DATE: 2021-02-09
+#+DATE: 2021-02-10
 #+AUTHOR_not: Dr Charl P. Botha <cpbotha@vxlabs.com>
 #+AUTHOR:
 
@@ -37,7 +37,7 @@ Important note: These are only /guidelines/. They were never meant to be
 applied dogmatically. They are great when you are starting fresh, and their
 intentions are good, but please do understand and adapt to your situation.
 
-- Status: *This handbook is about 60% complete on 2021-02-09*. The plan is to
+- Status: *This handbook is about 65% complete on 2021-02-10*. The plan is to
   get a complete v1 posted in Q1 of 2021. Sections that are marked =TODO= are,
   ahem, in progress.
 - Canonical URL: https://vxlabs.com/software-development-handbook/
