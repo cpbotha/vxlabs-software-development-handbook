@@ -18,11 +18,9 @@
 #+HUGO_CUSTOM_FRONT_MATTER: :author "Dr Charl P. Botha" :org true
 #+HUGO_AUTO_SET_LASTMOD: t
 
-#+HUGO_DRAFT: true
+#+HUGO_DRAFT: false
 
-* Introduction
-
-This is the *heavily in-progress* open source vxlabs software development
+Welcome to the *heavily in-progress* open source vxlabs software development
 handbook.
 
 It contains a number of best practices for building software, generally
@@ -44,6 +42,12 @@ intentions are good, but please do understand and adapt to your situation.
   ahem, in progress.
 - Canonical URL: https://vxlabs.com/software-development-handbook/
 - Github: https://github.com/cpbotha/vxlabs-software-development-handbook
+
+*/Table of Contents/*
+
+#+begin_export html
+{{< toc >}}
+#+end_export
 
 * General
 
