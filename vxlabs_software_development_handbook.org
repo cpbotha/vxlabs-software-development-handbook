@@ -324,6 +324,19 @@ after this has been discussed with the team lead, one could consider merging
 =develop= into the feature branch instead of rebasing. However, this should be
 considered a last exit.
 
+** TODO Commit atomic changes, describe each one carefully
+
+- ideal outcome: see example above; each feature branch consists of a number of
+  well-described, single-intention changes. Lithmus test: You can describe the
+  change in 50 characters!
+- describe the history: imagine future peep trying to figure out how a feature
+  progressed
+- squash only when *really* needed (???)
+  - some folks have taken to squashing all feature branch commits into one, in
+    order to work-around badly formulated commit messages. Maybe rather address
+    the root cause, that is, write great commit messages that document the
+    steps of your journey.
+
 ** Use gitflow for versioned software releases
 :PROPERTIES:
 :CUSTOM_ID: gitflow
