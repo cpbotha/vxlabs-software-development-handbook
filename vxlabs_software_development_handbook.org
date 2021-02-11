@@ -407,6 +407,9 @@ considered a last exit.
 
 ** TODO Commit atomic changes, describe each one carefully
 
+Try to apply the same discipline and passion that you to do coding, to the
+crafting of commits and commit messages.
+
 - ideal outcome: see example above; each feature branch consists of a number of
   well-described, single-intention changes. Lithmus test: You can describe the
   change in 50 characters!
