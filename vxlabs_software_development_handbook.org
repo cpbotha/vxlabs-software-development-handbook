@@ -167,6 +167,23 @@ curated list]].
   - recommended to review and update a few times a year
 - https://news.ycombinator.com/item?id=26048784
 
+
+** Give code reviews the same attention that you give coding
+
+Good code reviews contribute greatly to increased code quality, and have many
+other beneficial effects.
+
+Having someone else check your work helps to catch possible issues, is an
+opportunity to exchange knowledge and hence to improve (for both the reviewer
+and the reviewee), and helps to ensure that people stay up to date with other
+parts of the system.
+
+To get the maximum benefit from code reviews however, one has to treat it as
+being at least as important as the process of writing code itself.
+
+Developers should understand this, and all forms of leadership should
+understand this.
+
 ** Use automated testing
 
 In 2021, it has become clear that having a well-designed suite of automated
