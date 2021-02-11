@@ -504,6 +504,22 @@ In addition:
 8. Things that need documentation are documented;
 9. Code has test coverage.
 
+** Think about your diffs: Use =git mv= to move or rename
+
+When you want to move a file to a different directory, or maybe even just to
+rename it, please use =git mv=.
+
+Git will correctly note the move / rename, and carefully diff any changes that
+you might have made to the content.
+
+It sometimes happens that some tools (or some humans) remove a file and then
+re-add it in its new location, so that git dutifully records a full content
+deletion, and then a full content re-addition.
+
+Looking at the git logs, it now becomes unnecessarily difficult to determine
+whether the file was simply moved, or whether there really was a substantial
+change of contents.
+
 * Usability
 
 ** TODO Read and absorb Steve Krug's "Don't make me think"
