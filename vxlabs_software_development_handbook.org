@@ -316,6 +316,28 @@ In the 2020 Stack Overflow developer survey, [[https://insights.stackoverflow.co
 up to the second position, right below Rust, on the list of /most loved/
 languages]].
 
+** Choose boring technology
+
+This guideline is also known as "beware the shiny".
+
+We developers love shiny new technology.
+
+In some cases, one can justify pulling some shiny into a project.
+
+However, most of the time, you are going to save yourself and your team much
+time and sleep by choosing boring technology.
+
+If you choose the most well-known and time-proven technology, chances are that
+many of the issues you would otherwise have run into, have already been
+encountered, solved, and documented.
+
+One example of applying this guideline, is [[#django][defaulting to Django]] when you need
+to write a backend in Python.
+
+Please try to make time to read [[https://mcfunley.com/choose-boring-technology][the "Choose boring technology" essay by Dan
+McKinley]]. It originally brought this piece of wisdom to a much broader
+audience.
+
 * Version control (with git)
 
 ** Follow the 7 rules of writing good commit messages
