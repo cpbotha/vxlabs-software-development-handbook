@@ -475,6 +475,9 @@ crafting of commits and commit messages.
     order to work-around badly formulated commit messages. Maybe rather address
     the root cause, that is, write great commit messages that document the
     steps of your journey.
+  - also when you squash everything together, there is the tendency to pack
+    more than one thing into the change!
+  - bisecting / finding the exact change that introduced a bug
 
 ** Use gitflow for versioned software releases
 :PROPERTIES:
