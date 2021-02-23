@@ -33,7 +33,7 @@ Important note: These are only /guidelines/. They were never meant to be
 applied dogmatically. They are great when you are starting fresh, and their
 intentions are good, but please do understand and adapt to your situation.
 
-- Status: *This handbook is about 65% complete on 2021-02-10*. The plan is to
+- Status: *This handbook is about 70% complete on 2021-02-23*. The plan is to
   get a complete v1 posted in Q1 of 2021. Sections that are marked =TODO= are,
   ahem, in progress.
 - Canonical URL: https://vxlabs.com/software-development-handbook/
@@ -147,13 +147,14 @@ time to ramp them up.
 Consider investing some of that time into ensuring that your =README.md= has
 all of the necessary steps to get a new developer up to speed instead.
 
-Next time this happens, say "welcome!" and point them at the readme! They'll be
-able to help themselves, only coming to you with more specific questions, which
-you can use to further improve the readme.
+Next time this happens, say "welcome!" and point them at the readme!
+
+They'll be able to help themselves, only coming to you with more specific
+questions, which you can use to further improve the readme.
 
 In addition to the getting started information, the project =README.md= should
 also contain a brief description of the project, and links to other relevant
-documenation, such as [[#architecture-description][the architecture description]].
+documentation, such as [[#architecture-description][the architecture description]].
 
 For inspiration, take a look at some of the readmes on the [[https://github.com/matiassingers/awesome-readme][Awesome README
 curated list]].
@@ -459,7 +460,7 @@ after this has been discussed with the team lead, one could consider merging
 =develop= into the feature branch instead of rebasing. However, this should be
 considered a last exit.
 
-** TODO Commit atomic changes, describe each one carefully
+** TODO Commit atomic changes and describe each one carefully
 
 Try to apply the same discipline and passion that you to do coding, to the
 crafting of commits and commit messages.
@@ -671,6 +672,9 @@ Follow the convention that all tests (we use pytest) are in files named
 =test_*.py=, and debug and test scripts are named =debug_*.py=.
 
 ** Prefer Django
+:PROPERTIES:
+:CUSTOM_ID: django
+:END:
 
 Django is the highest quality Python web-framework.
 
