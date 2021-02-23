@@ -267,7 +267,7 @@ whenever a file is saved.
 They can also be integrated with [[#ci-pipelines][CI pipelines]], as one of the checks before a
 pull request is merged.
 
-** TODO Setup automated CI pipelines with as much code quality checks as possible
+** TODO Setup automated CI pipelines with as much code quality checking as possible
 :PROPERTIES:
 :CUSTOM_ID: ci-pipelines
 :END:
