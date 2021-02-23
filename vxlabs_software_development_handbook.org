@@ -158,15 +158,47 @@ documenation, such as [[#architecture-description][the architecture description]
 For inspiration, take a look at some of the readmes on the [[https://github.com/matiassingers/awesome-readme][Awesome README
 curated list]].
 
-** TODO Maintain a project architecture description
+** Maintain a compact project architecture description
+CLOSED: [2021-02-23 Tue 08:58]
 :PROPERTIES:
 :CUSTOM_ID: architecture-description
 :END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-02-23 Tue 08:58]
+:END:
 
-- https://matklad.github.io/2021/02/06/ARCHITECTURE.md.html
-  - recommended to review and update a few times a year
-- https://news.ycombinator.com/item?id=26048784
+Aleksey Kladov, also known as matklad, main developer of the [[https://github.com/rust-analyzer/rust-analyzer][rust-analyzer]],
+[[https://matklad.github.io/2021/02/06/ARCHITECTURE.md.html][makes the case for also maintaining a high-level architecture description]] at
+the top-level of your project.
 
+One of the many insightful points he makes is the following:
+
+#+begin_quote
+... the biggest difference between an occasional contributor and a core
+developer lies in the knowledge about the physical architecture of the
+project. Roughly, it takes 2x more time to write a patch if you are unfamiliar
+with the project, but it takes 10x more time to figure out where you should
+change the code.
+#+end_quote
+
+followed by:
+
+#+begin_quote
+I find ARCHITECTURE file to be a low-effort high-leverage way to bridge this
+gap.
+#+end_quote
+
+The idea is that you create a /compact/ high-level description of the main
+systems, layers, boundaries, architectural invariants[fn:1] and cross-cutting
+concerns of your project.
+
+Revisit this document once or twice a year to make sure that it still reflects
+reality.
+
+When new developers start on the project, or future developers have to return
+to it, this document will be of great assistance. Furthermore, it is also a
+great opportunity for the current team to review and possibly improve their own
+architecture at regular intervals.
 
 ** Give code reviews the same attention that you give coding
 
