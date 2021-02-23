@@ -711,6 +711,11 @@ framework in memory and in complexity.
 However, in future you have the option of switching on any of the
 built-in functionality when the project requirements change.
 
+Longer-running projects and product development trajectories are especially
+vulnerable, because it can be hard to predict how requirements can evolve over
+time. With Django, there is a high probability that it has your future bases
+covered as well.
+
 To summarize: Choose Django, unless you have really good and really
 specific reasons not to do so.
 
