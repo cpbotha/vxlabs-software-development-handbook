@@ -802,5 +802,12 @@ Install the [[https://marketplace.visualstudio.com/items?itemName=esbenp.prettie
 
 Activate =editor.formatOnSave=.
 
-* TODO React
+* React
 
+** TODO Don't deep copy state
+
+https://redux.js.org/faq/performance#do-i-have-to-deep-clone-my-state-in-a-reducer-isnt-copying-my-state-going-to-be-slow
+
+* Footnotes
+
+[fn:1] https://news.ycombinator.com/item?id=26052287 
