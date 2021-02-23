@@ -1,5 +1,5 @@
 #+TITLE: vxlabs software development handbook
-#+DATE: 2021-02-10
+#+DATE: 2021-02-23
 #+AUTHOR_not: Dr Charl P. Botha <cpbotha@vxlabs.com>
 #+AUTHOR:
 
