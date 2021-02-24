@@ -1,5 +1,7 @@
 #+TITLE: vxlabs software development handbook
 #+DATE: 2021-02-23
+
+# for HTML / HUGO output, we have to zero the author field
 #+AUTHOR_not: Dr Charl P. Botha <cpbotha@vxlabs.com>
 #+AUTHOR:
 
@@ -19,6 +21,11 @@
 #+HUGO_AUTO_SET_LASTMOD: t
 
 #+HUGO_DRAFT: false
+
+# on 2021-02-23 tried to generate PDF via orgmode -> latex -> pdflatex
+# most of it works, but a number of clauses we would need to make conditional
+# maybe better to go via HTML
+#+LATEX_CLASS_OPTIONS: [a4paper, a4wide, 11pt, colorlinks=true, citecolor=black, linkcolor=black, urlcolor=black]
 
 Welcome to the *heavily in-progress* open source vxlabs software development
 handbook.
