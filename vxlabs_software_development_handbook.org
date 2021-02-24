@@ -505,18 +505,19 @@ Rather address the root cause of the issue, and help your fellow developers to
 learn how to formulate atomic commits, and to write great history.
 
 If you squash commits together like that, you lose out on the benefits listed
-above.
+above. More broadly speaking, you are deliberately losing valuable historic
+information for no defensible benefit.
 
-More philosophically, coding is about discipline and passion. Apply yourself.
+However, even the most disciplined developer might have written a commit
+message titled "wip" or "moving to laptop". In these specific cases, it is
+justified to apply squashing only to absorb such commits into a neighbouring
+/atomic/ commit.
 
-That being said, even the most disciplined developer might have written a
-commit message titled "wip" or "moving to laptop". In these specific cases, it
-is justified to apply squashing only to absorb such commits into a neighbouring
-atomic commit.
+Software development is not only about coding.
 
-Software development is not only about coding. Its other processes, such as
-[[#comment-your-code][writing documentation]], [[#code-reviews][/reviewing/ code]] and writing history should be given at least
-as much attention.
+Its other components, such as [[#comment-your-code][writing documentation]], [[#code-reviews][/reviewing/ code]] and
+writing history, deserve the same discipline and passion afforded to its main
+event.
 
 ** Use gitflow for versioned software releases
 :PROPERTIES:
