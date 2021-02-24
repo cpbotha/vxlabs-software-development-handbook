@@ -227,7 +227,10 @@ being at least as important as the process of writing code itself.
 Developers should understand this, and all forms of leadership should
 understand this.
 
-** Use automated testing
+** Apply automated testing generously
+:PROPERTIES:
+:CUSTOM_ID: testing
+:END:
 
 In 2021, it has become clear that having a well-designed suite of automated
 testing that can be executed during development, before features are merged,
@@ -476,7 +479,7 @@ Try to apply the same discipline and passion that you to do coding, to the
 crafting of commits and commit messages.
 
 The ideal outcome is that each feature branch consists of a number of
-well-described, /single-intention/, or /atomic/,changes.
+well-described, /single-intention/, or /atomic/, changes.
 
 A good test for single-intention is whether you can describe that single change
 in 50 characters or less, which is totally coincidentally the [[#good-commit-messages][maximum length
@@ -515,9 +518,9 @@ justified to apply squashing only to absorb such commits into a neighbouring
 
 Remember that software development is not only about coding.
 
-Its other components, such as [[#comment-your-code][writing documentation]], [[#code-reviews][/reviewing/ code]] and
-writing history, deserve the same discipline and passion afforded to its main
-event.
+Its other components, such as [[#comment-your-code][writing documentation]], [[#testing][writing automated tests]],
+[[#code-reviews][/reviewing/ code]] and writing history, deserve the same discipline and passion
+afforded to its main event.
 
 ** Use gitflow for versioned software releases
 :PROPERTIES:
