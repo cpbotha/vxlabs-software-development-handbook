@@ -209,6 +209,9 @@ great opportunity for the current team to review and possibly improve their own
 architecture at regular intervals.
 
 ** Give code reviews the same attention that you give coding
+:PROPERTIES:
+:CUSTOM_ID: code-reviews
+:END:
 
 Good code reviews contribute greatly to increased code quality, and have many
 other beneficial effects.
@@ -467,24 +470,53 @@ after this has been discussed with the team lead, one could consider merging
 =develop= into the feature branch instead of rebasing. However, this should be
 considered a last exit.
 
-** TODO Commit atomic changes and describe each one carefully
+** Commit atomic changes and describe each one carefully
 
 Try to apply the same discipline and passion that you to do coding, to the
 crafting of commits and commit messages.
 
-- ideal outcome: see example above; each feature branch consists of a number of
-  well-described, single-intention changes. Lithmus test: You can describe the
-  change in 50 characters!
-- describe the history: imagine future peep trying to figure out how a feature
-  progressed
-- squash only when *really* needed (???)
-  - some folks have taken to squashing all feature branch commits into one, in
-    order to work-around badly formulated commit messages. Maybe rather address
-    the root cause, that is, write great commit messages that document the
-    steps of your journey.
-  - also when you squash everything together, there is the tendency to pack
-    more than one thing into the change!
-  - bisecting / finding the exact change that introduced a bug
+The ideal outcome is that each feature branch consists of a number of
+well-described, /single-intention/, or /atomic/,changes.
+
+A good test for single-intention is whether you can describe that single change
+in 50 characters or less, which is totally coincidentally the [[#good-commit-messages][maximum length
+for the git commit message subject]].
+
+Doing it like this is desirable for the following reasons:
+
+- The git history will be a step-by-step description, that can be read almost
+  like a story, of how a feature was built. Imagine future you, or a future
+  team-mate, reading this story to try and understand your work. A sequence of
+  well-described, single-intention commits gives a much better representation
+  of history than a single composite message.
+- If a bug is introduced at some point in history, it can later be found more
+  easily with techniques like [[https://git-scm.com/docs/git-bisect][git bisect]].
+- If anyone needs to forward or backward port changes to a release branch, or
+  back to the develop branch, as is described by [[#gitflow][gitflow]], the relevant commits
+  can be easily cherry-picked, because they are single-intention, and compactly
+  described.
+
+We know that some folks have taken to squashing all feature branch commits into
+one combined commit, in order to work around badly formulated commit messages.
+
+Why would you do that?
+
+Rather address the root cause of the issue, and help your fellow developers to
+learn how to formulate atomic commits, and to write great history.
+
+If you squash commits together like that, you lose out on the benefits listed
+above.
+
+More philosophically, coding is about discipline and passion. Apply yourself.
+
+That being said, even the most disciplined developer might have written a
+commit message titled "wip" or "moving to laptop". In these specific cases, it
+is justified to apply squashing only to absorb such commits into a neighbouring
+atomic commit.
+
+Software development is not only about coding. Its other processes, such as
+[[#comment-your-code][writing documentation]], [[#code-reviews][/reviewing/ code]] and writing history should be given at least
+as much attention.
 
 ** Use gitflow for versioned software releases
 :PROPERTIES:
