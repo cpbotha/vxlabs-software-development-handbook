@@ -40,9 +40,9 @@ Important note: These are only /guidelines/. They were never meant to be
 applied dogmatically. They are great when you are starting fresh, and their
 intentions are good, but please do understand and adapt to your situation.
 
-- Status: *This handbook is about 70% complete on 2021-02-23*. The plan is to
+- Status: *This handbook is about 75% complete on 2021-02-24*. The plan is to
   get a complete v1 posted in Q1 of 2021. Sections that are marked =TODO= are,
-  ahem, in progress.
+  ahem, in progress. See [[https://github.com/cpbotha/vxlabs-software-development-handbook/commits/main][github commits]] for the latest changes.
 - Canonical URL: https://vxlabs.com/software-development-handbook/
 - Github: https://github.com/cpbotha/vxlabs-software-development-handbook
 
