@@ -513,7 +513,7 @@ message titled "wip" or "moving to laptop". In these specific cases, it is
 justified to apply squashing only to absorb such commits into a neighbouring
 /atomic/ commit.
 
-Software development is not only about coding.
+Remember that software development is not only about coding.
 
 Its other components, such as [[#comment-your-code][writing documentation]], [[#code-reviews][/reviewing/ code]] and
 writing history, deserve the same discipline and passion afforded to its main
