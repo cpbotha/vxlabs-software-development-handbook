@@ -519,8 +519,8 @@ justified to apply squashing only to absorb such commits into a neighbouring
 Remember that software development is not only about coding.
 
 Its other components, such as [[#comment-your-code][writing documentation]], [[#testing][writing automated tests]],
-[[#code-reviews][/reviewing/ code]] and writing history, deserve the same discipline and passion
-afforded to its main event.
+[[#code-reviews][/reviewing/ code]] and, as described here, recording history, deserve the same
+discipline and passion afforded to its main event.
 
 ** Use gitflow for versioned software releases
 :PROPERTIES:
