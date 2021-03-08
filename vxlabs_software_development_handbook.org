@@ -362,6 +362,18 @@ In the 2020 Stack Overflow developer survey, [[https://insights.stackoverflow.co
 up to the second position, right below Rust, on the list of /most loved/
 languages]].
 
+*** Gradual conversion
+
+On a practical note, it is straight-forward to setup your frontend build
+configuration to mix JavaScript and TypeScript files. In other words, you can
+configure that, and then start writing all new code in TypeScript, whilst
+converting old files when you can make the time, all the while keeping your
+existing app building without issues.
+
+In other words, it is practical, and recommended, to /gradually/ convert your
+JavaScript codebase to TypeScript.
+
+
 ** Choose boring technology
 
 This guideline is also known as "beware the shiny".
