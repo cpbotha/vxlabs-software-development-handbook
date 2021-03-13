@@ -227,6 +227,9 @@ being at least as important as the process of writing code itself.
 Developers should understand this, and all forms of leadership should
 understand this.
 
+The [[#merge-request-checklist][merge request checklist]] below could be a useful addition to your review
+procedure.
+
 ** Apply automated testing generously
 :PROPERTIES:
 :CUSTOM_ID: testing
@@ -294,6 +297,9 @@ improve their work.
 See [[#flake8][flake8 for Python]] and [[#eslint][eslint for TypeScript]] below for specific examples.
 
 ** Use automatic code formatting
+:PROPERTIES:
+:CUSTOM_ID: auto-formatting
+:END:
 
 Back in the day, we used to entertain ourselves with multi-year arguments as to
 the best placement of the opening brace in C.
@@ -313,12 +319,36 @@ whenever a file is saved.
 They can also be integrated with [[#ci-pipelines][CI pipelines]], as one of the checks before a
 pull request is merged.
 
-** TODO Setup automated CI pipelines with as much code quality checking as possible
+** Setup automated CI pipelines with as much code quality checking as possible
 :PROPERTIES:
 :CUSTOM_ID: ci-pipelines
 :END:
 
-formatting, type-checking, linting, building, test suite
+These days, most source code management platforms offer powerful mechanisms to
+setup automated CI (continuous integration) pipelines.
+
+Good software teams use this to run their full automated test suites on their
+codebases, ensuring that all tests pasts before merging the new code.
+
+In addition to automated testing, teams should use this facility to apply as
+many additional code quality checking tools to the codebase as possible.
+
+Examples include but are not limited to:
+
+- [[https://flake8.pycqa.org/en/latest/][flake8]] for Python linting and style checking.
+- [[http://mypy-lang.org/][mypy]] for Python type checking.
+- [[#eslint][eslint]] for TypeScript linting.
+- [[https://clang-analyzer.llvm.org/][Clang Static Analyzer]] or [[http://cppcheck.sourceforge.net/][cppcheck]] for C++ source code analysis
+
+Having these as part of the CI pipeline augments the [[#code-reviews][code review]], in that the
+reviewer does not have to worry about any of the details of formatting and
+linting as these will be automatically flagged, and can instead focus on more
+subtle issues.
+
+As [[#linting][mentioned]] [[#auto-formatting][above]], most of these tools should also be running continuously and
+automatically in the team's IDEs for maximum effect, but having them in the CI
+pipeline as well helps to ensure that they are applied following project
+requirements.
 
 ** Prefer TypeScript over JavaScript
 :PROPERTIES:
@@ -583,6 +613,9 @@ My experience is mostly with versioned software releases and gitflow, so I'm
 keeping this section short.
 
 ** Before merging, apply the merge request checklist
+:PROPERTIES:
+:CUSTOM_ID: merge-request-checklist
+:END:
 
 From the following Tweet by [[https://twitter.com/pablosaraiva][pablosaraiva]]:
 
@@ -645,6 +678,8 @@ If you don't have time at this moment to read this compact book, you could read
 my book notes in the meantime. (to be published)
 
 - [ ] usability testing
+
+** TODO Optimize for the default
 
 ** TODO Pick and use a design system and accompanying toolkit
 
