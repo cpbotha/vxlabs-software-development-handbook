@@ -49,6 +49,8 @@ intentions are good, but please do understand and adapt to your situation.
 
 */License/*
 
+This handbook is copyright 2021 Charl P. Botha <cpbotha@vxlabs.com>.
+
 #+begin_export html
 <a rel="license"
 href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons
