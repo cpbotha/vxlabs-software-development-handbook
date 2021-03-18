@@ -668,16 +668,29 @@ change of contents.
 
 * Usability
 
-** TODO Read and absorb Steve Krug's "Don't make me think"
+** Read and absorb Steve Krug's "Don't make me think"
 
 This book is a great introduction to website (and to a large extent general UI)
 usability that gives insight into the mind of that very mysterious being,
 namely "the user".
 
-If you don't have time at this moment to read this compact book, you could read
-my book notes in the meantime. (to be published)
+Until you can make time to read that book, I will try and summarise the gist of
+it here.
 
-- [ ] usability testing
+Krug's first law (and chapter) of usability is: Don't make me think!
+
+He makes the incredibly important point that users are *never* going to spend
+us much time and effort trying to figure out the web-pages (and the UIs) that
+we design as we would like to think.
+
+In fact, we have little more than a glance to work with.
+
+If the web-page or UI is not usable enough within that moment, we are going to
+lose the user.
+
+Therefore, a web page, or any UI, should as far as possible be obvious and
+self-evident. If that's really not possible, it should at the very least be
+self-explanatory.
 
 ** TODO Optimize for the default
 
