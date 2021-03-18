@@ -692,7 +692,32 @@ Therefore, a web page, or any UI, should as far as possible be obvious and
 self-evident. If that's really not possible, it should at the very least be
 self-explanatory.
 
-** TODO Optimize for the default
+** Optimize for the default
+
+This is a guideline that I picked up from a professor of information
+visualization in the Netherlands in the early 2000s, and that has served me
+well ever since.
+
+In that context, the guideline was for designing interaction flows in often
+complex information visualization tools.
+
+There are often multiple ways for users to navigate through and interact with
+the system.
+
+In such cases, try and find the flow that will be used 90% of the time, and
+make that specific flow work as smoothly and as effortlessly as possible. After
+this is done, continue to the second most often used flow.
+
+It does seem pretty obvious when you realise that this will mathematically
+benefit the greatest number of users the most.
+
+That being said, this guideline is quite useful to help disentangle complex
+user interaction requirements, as one can first tease out the "default flows",
+and go from there.
+
+Here I mention it in the context of usability, but the principle could be
+applied in more contexts. Find the default mode of operation of any system, and
+start by optimising those.
 
 ** TODO Pick and use a design system and accompanying toolkit
 
