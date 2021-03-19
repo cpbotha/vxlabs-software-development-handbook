@@ -721,13 +721,19 @@ Here I mention it in the context of usability, but the principle could be
 applied in more contexts. Find the default mode of operation of any system, and
 start by optimising those.
 
-** TODO Pick and use a design system and accompanying toolkit
+** Pick and use a design system and accompanying toolkit
 
-- [ ] state problem: we are almost all engineering
-- [ ] motivate design system + toolkit as engineer-friendly solution for
-  practical usability
+The environments I mostly operate in are dominated by back-end expertise and
+engineering. In other words, we mostly only have occasional access to UI
+experts and frontend folks.
 
-We use [[https://material.io/design][Material Design]] along with [[https://material-ui.com/][material-ui]] for our React frontends.
+In environments such as these, and probably in many others, a practical and
+useful piece of advice is to select one of the high quality design systems that
+are available, as well as an accompanying re-usable UI component library, to
+apply these consistently in all of your projects.
+
+We generally use [[https://material.io/design][Material Design]] along with [[https://material-ui.com/][material-ui]] for our React
+frontends.
 
 * Python
   
