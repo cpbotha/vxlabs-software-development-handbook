@@ -749,7 +749,8 @@ frontends.
 ** Type annotate all the things
 
 The same three arguments as for [[#typescript-over-javascript][Prefer TypeScript]] up above hold for Python type
-annotation.
+annotation. The findings of the JavaScript-based type annotation study
+mentioned there are most probably also relevant.
 
 In short, type annotation in Python is structured, human- and
 machine-understandable type information that enriches your documentation, can
