@@ -371,6 +371,15 @@ By understanding JavaScript, TypeScript saves you time catching errors and
 providing fixes before you run code.
 #+end_quote
 
+In [[https://earlbarr.com/publications/typestudy.pdf][2017, researchers retroactively type-annotated a statistically significant
+random sampling of github bugs in JavaScript code]], and discovered that,
+conservatively speaking, 15% of those bugs would not have been made in the
+first place had a type system such as either Flow (type annotation) or
+TypeScript been used.
+
+That's a pretty solid scientific finding indicating some of the practical
+benefits of type systems.
+
 From my practical experience, after years of as-modern-as-possible JavaScript
 and initially /resisting/ the perceived extra burden of using TypeScript,
 TypeScript improves the quality of our products by:
@@ -927,7 +936,6 @@ main TypeScript repo]].
 :PROPERTIES:
 :CUSTOM_ID: prettier
 :END:
-
 
 Using an opinionated and automatic code formatter like
 [[https://prettier.io/][prettier]] saves you time, because you don't
