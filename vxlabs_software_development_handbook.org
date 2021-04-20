@@ -797,9 +797,26 @@ Poetry solves two really important problems for us:
 There are and have been other tools that attempt to solve the same problems,
 but so far none as effectively as poetry in practice.
 
-** TODO Consider Conda for managing data-science and R&D dependencies
+** Consider Conda for managing data-science and R&D dependencies
 
-https://docs.conda.io/en/latest/miniconda.html
+The Conda ecosystem has great support for data-science and especially machine
+learning R&D workloads.
+
+In some of these cases, you, or the data-scientists you work with, might
+strongly prefer having access to Conda packages.
+
+If you have evaluated the pros and cons in your situation, you may decide to go
+with conda.
+
+We recommend [[https://github.com/conda-forge/miniforge][miniforge]], and specifically the mambaforge variant on that page, a
+drop-in replacement for conda that defaults to the conda-forge, supports
+various architectures, and also optionally supports PyPy.
+
+The main reason we recommend this, is because your organization may or may not
+have [[https://www.anaconda.com/terms-of-service][a license to use the main Anaconda repository]].
+
+Conda itself does not support version locking like Poetry, but you can make use
+of tools like [[https://conda.github.io/conda-pack/][conda-pack]] to bundle your application with its environment.
 
 ** Use the black formatter with defaults
 
