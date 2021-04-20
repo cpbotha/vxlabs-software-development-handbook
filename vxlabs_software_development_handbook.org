@@ -787,10 +787,9 @@ Poetry solves two really important problems for us:
 
 1. It enables the flexible specification of dependencies, but through its
    [[https://python-poetry.org/docs/basic-usage/#installing-without-poetrylock][package locking mechanism]], offers a straight-forward and reliable method to
-   reproduce /exactly/ the exact versions of dependencies on other
-   systems. This is crucially important when we want to develop, test
-   (especially in CI) and deploy on systems that are the same down to the
-   package hashes.
+   reproduce /exactly/ the versions of dependencies on other systems. This is
+   crucially important when we want to develop, test (especially in CI) and
+   deploy on systems that are the same down to the package hashes.
 2. It enables the flexible definition of package metadata, so that we can build
    and distribute our own packages to act as dependencies for third party
    packages.
