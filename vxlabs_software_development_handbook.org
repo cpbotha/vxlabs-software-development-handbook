@@ -849,10 +849,28 @@ project, takes care of what's mentioned here.
   ignore = E203
 #+end_example
 
-** TODO Use cell-based debug scripts
+** Use cell-based debug scripts
 
-Follow the convention that all tests (we use pytest) are in files named
-=test_*.py=, and debug and test scripts are named =debug_*.py=.
+Visual Studio Code, PyCharm Professional and a selection of other IDEs and
+editors support Python scripts with [[https://code.visualstudio.com/docs/python/jupyter-support-py#_jupyter-code-cells][Jupyter-like code cells]].
+
+Code cells are blocks of code that start with =#%% comment describing this
+cell=, in an otherwise normal Python script.
+
+Blocks can be interactively executed one-by-one, often with additional UI tools
+to inspect variables and even charts, a feature that facilitates
+experimentation and debugging.
+
+In addition to test files following the naming convention =test_*.py=, we
+suggest here to add code cell scripts, following the naming convention
+=debug_*.py=, to your project.
+
+These scripts can be used to demonstrate or document aspects of the project, or
+they can be used to explore APIs in use by the project, in both cases helpful
+to (future) team-mates.
+
+If you follow this convention, =debug_*.py= scripts can be easily excluded from
+[[#linting][automated linting tools]].
 
 ** Prefer Django
 :PROPERTIES:
