@@ -968,6 +968,69 @@ main TypeScript repo]].
 
 ** Group your imports
 
+We take our /inspiration/ from the [[https://www.python.org/dev/peps/pep-0008/#imports][Python PEP8]] recommendation:
+
+#+begin_quote
+Imports should be grouped in the following order:
+
+- Standard library imports.
+- Related third party imports.
+- Local application/library specific imports.
+#+end_quote
+
+... and we formulate this rule for TypeScript as:
+
+#+begin_quote
+> Sort TypeScript / JavaScript import groups from standard to local. In other
+> words, sort the groups from base through to custom, or in more other words from
+> far to near.
+#+end_quote
+
+For example, in a React component based on material-ui, this could look like:
+
+#+begin_src typescript
+// in this module, we use React and Redux as our base libraries
+import React, { useCallback, useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+
+// on top of that, we use these material-ui components
+import Button from "@material-ui/core/Button";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+
+// and on top of that, we have our own components and local modules
+import { setTroloThing } from "../../thing";
+import { OurSpecialComponent } from "./components/our_special_component";
+import { ISomeInterface } from "./hra_types";
+#+end_src
+
+We do this for at least two good reasons:
+
+1. This adds a light-weight hierarchical structure to the imports, which
+   facilitates the understanding of the dependency network between all of the
+   modules in your project.
+2. As is almost always the case, having conventions such as these frees up a
+   few more mental cycles when writing code.
+
+You can implement this in eslint as follows:
+
+#+begin_src javascript
+// this is part of our .eslintrc.js under the "rules" object
+"import/order": [
+  "error",
+  {
+    groups: ["builtin", "external", "internal", ["index", "sibling", "parent", "object"]],
+    // default is builtin, external; but we want to divide up externals into groups also
+    pathGroupsExcludedImportTypes: ["builtin"],
+    // define material-ui group that will appear separately after other main externals
+    pathGroups: [{ pattern: "@material-ui/**", group: "external", position: "after" }],
+    "newlines-between": "always-and-inside-groups",
+    alphabetize: { order: "asc", caseInsensitive: true },
+  },
+],
+#+end_src
+
 ** Use the prettier formatter
 :PROPERTIES:
 :CUSTOM_ID: prettier
@@ -996,13 +1059,13 @@ Activate =editor.formatOnSave=.
 
 * React
 
+** TODO Use ducks to organize your Redux  
+
 ** TODO Don't deep copy state
 
 https://redux.js.org/faq/performance#do-i-have-to-deep-clone-my-state-in-a-reducer-isnt-copying-my-state-going-to-be-slow
 
 ** TODO Name your effects
-
-** TODO Use ducks to organize your Redux  
 
 * Footnotes
 
