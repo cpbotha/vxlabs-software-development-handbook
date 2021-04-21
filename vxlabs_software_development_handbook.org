@@ -981,9 +981,9 @@ Imports should be grouped in the following order:
 ... and we formulate this rule for TypeScript as:
 
 #+begin_quote
-> Sort TypeScript / JavaScript import groups from standard to local. In other
-> words, sort the groups from base through to custom, or in more other words from
-> far to near.
+Sort TypeScript / JavaScript import groups from standard to local. In other
+words, sort the groups from base through to custom, or in more other words from
+far to near.
 #+end_quote
 
 For example, in a React component based on material-ui, this could look like:
