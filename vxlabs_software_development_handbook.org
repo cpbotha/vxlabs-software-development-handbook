@@ -1105,12 +1105,39 @@ together action types, actions and reducers in a single file.
 This is called the [[https://github.com/erikras/ducks-modular-redux][ducks pattern]], and it is [[https://redux.js.org/style-guide/style-guide#structure-files-as-feature-folders-with-single-file-logic]["strongly recommended" by the Redux
 style guide]].
 
-** TODO Don't deep copy state
+** Don't deep copy state
 
+One of the first things we learn in Redux, is that [[https://redux.js.org/style-guide/style-guide#do-not-mutate-state][it is critical not to mutate
+state]].
 
-https://redux.js.org/style-guide/style-guide#do-not-mutate-state
+What some developers then soon resort to doing, is to deep copy (some) state in
+reducers in order to /ensure/ that nothing is mutated.
 
-https://redux.js.org/faq/performance#do-i-have-to-deep-clone-my-state-in-a-reducer-isnt-copying-my-state-going-to-be-slow
+This is [[https://redux.js.org/faq/performance#do-i-have-to-deep-clone-my-state-in-a-reducer-isnt-copying-my-state-going-to-be-slow][a common misconception]] that will cause performance issues in most apps,
+related both to unnecessary memory copies and to unnecesary redraws, and should
+obviously be avoided.
+
+In reality, for a non-nested state, a shallow copy and update are
+sufficient. For nested state, one has to shallow copy and appropriately update
+each level in the state.
+
+The rule is: You want to do the absolute minimum for any dependent components
+to see a change when they do an equality check, but without /changing/ any
+existing fields or nesting layers.
+
+For example, if a reducer only needs to change two top-level properties, namely
+=label= and =answer=, the below is sufficient:
+
+#+begin_src typescript
+  return {...oldState, label: "Some new string", answer: 42}
+#+end_src
+
+This means that everything except the two properties are shallow copied, so the
+rest of the data members are the same objects, but wrapped in a new state
+object.
+
+Please see [[https://redux.js.org/recipes/structuring-reducers/immutable-update-patterns][the Redux documentation on the matter of state updates]] for examples
+showing how to handle deeply nested state.
 
 ** TODO Name your effects
 
