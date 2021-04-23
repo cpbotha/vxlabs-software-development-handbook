@@ -1090,9 +1090,25 @@ Activate =editor.formatOnSave=.
 
 * React
 
-** TODO Use ducks to organize your Redux
+In this section, I list guidelines to remedy issues I see very often in React
+and Redux projects.
+
+In addition to these guidelines, try to make time to review:
+
+- [[https://redux.js.org/style-guide/style-guide][The Redux Style Guide]]
+
+** Use ducks to organize your Redux
+
+For each feature in your frontend, it makes a great deal of sense to bundle
+together action types, actions and reducers in a single file.
+
+This is called the [[https://github.com/erikras/ducks-modular-redux][ducks pattern]], and it is [[https://redux.js.org/style-guide/style-guide#structure-files-as-feature-folders-with-single-file-logic]["strongly recommended" by the Redux
+style guide]].
 
 ** TODO Don't deep copy state
+
+
+https://redux.js.org/style-guide/style-guide#do-not-mutate-state
 
 https://redux.js.org/faq/performance#do-i-have-to-deep-clone-my-state-in-a-reducer-isnt-copying-my-state-going-to-be-slow
 
