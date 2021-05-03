@@ -1139,7 +1139,30 @@ object.
 Please see [[https://redux.js.org/recipes/structuring-reducers/immutable-update-patterns][the Redux documentation on the matter of state updates]] for examples
 showing how to handle deeply nested state.
 
-** TODO Name your effects
+** Use named functions for effect hooks
+
+I often see React projects with effects like =useEffect(() => {/* a fuction
+body */})=
+
+Arrow functions are certainly popular, but in this case, there is an
+opportunity to /name/ the effect function for increased clarity.
+
+Following this convention will encourage developers to think carefully about
+the /purpose/ of the effect in order to name the function well, which will in
+turn help team mates down the line to understand the role of each effect.
+
+In [[https://reactjs.org/docs/hooks-rules.html][the React Rules of Hooks examples]], there are examples of named effect
+functions that look like this:
+
+#+begin_src typescript
+  // 2. Use an effect for persisting the form
+  useEffect(function persistForm() {
+    localStorage.setItem('formData', name);
+  });
+#+end_src
+
+As an added advantage, these named functions will also show up in your IDE's
+code navigation UI.
 
 * Footnotes
 
