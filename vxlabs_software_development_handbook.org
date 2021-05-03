@@ -1,5 +1,5 @@
 #+TITLE: vxlabs software development handbook
-#+DATE: 2021-02-23
+#+DATE: 2021-05-03
 
 # for HTML / HUGO output, we have to zero the author field
 #+AUTHOR_not: Dr Charl P. Botha <cpbotha@vxlabs.com>
@@ -27,8 +27,7 @@
 # maybe better to go via HTML
 #+LATEX_CLASS_OPTIONS: [a4paper, a4wide, 11pt, colorlinks=true, citecolor=black, linkcolor=black, urlcolor=black]
 
-Welcome to the *heavily in-progress* open source vxlabs software development
-handbook.
+Welcome to open source vxlabs software development handbook.
 
 It contains a number of best practices for building software, generally
 web-based, using Python on the backend and TypeScript for the
@@ -40,9 +39,7 @@ Important note: These are only /guidelines/. They were never meant to be
 applied dogmatically. They are great when you are starting fresh, and their
 intentions are good, but please do understand and adapt to your situation.
 
-- Status: *This handbook is about 85% complete on 2021-04-21*. The plan is to
-  get a complete v1 posted in Q1 of 2021. Sections that are marked =TODO= are,
-  ahem, in progress. See [[https://github.com/cpbotha/vxlabs-software-development-handbook/commits/main][github commits]] for the latest changes.
+- Status: *v1.0.0 of this handbook was published on 2021-05-03*.
 - Canonical URL: https://vxlabs.com/software-development-handbook/
 - Github: https://github.com/cpbotha/vxlabs-software-development-handbook
 
@@ -59,7 +56,7 @@ this handbook available under the <a rel="license"
 href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution
 4.0 International License</a> in case you find any part of this useful and
 would like to re-use, also commercially. The only requirement is that you give
-appropriate credit (author, link back to this site, and so on).
+appropriate credit (author Charl P. Botha <cpbotha@vxlabs.com>, link back to this site, and so on).
 #+end_export
 
 */Table of Contents/*
