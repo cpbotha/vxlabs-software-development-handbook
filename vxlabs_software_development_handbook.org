@@ -40,6 +40,8 @@ applied dogmatically. They are great when you are starting fresh, and their
 intentions are good, but please do understand and adapt to your situation.
 
 - Status: *v1.0.0 of this handbook was published on 2021-05-03*.
+- I'm planning to apply [[https://semver.org/][semver]] for fix and feature (new section) updates to
+  this guide, but will retain the initial publication date for the v1 series.
 - Canonical URL: https://vxlabs.com/software-development-handbook/
 - Github: https://github.com/cpbotha/vxlabs-software-development-handbook
 
