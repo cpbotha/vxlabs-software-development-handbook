@@ -760,19 +760,19 @@ During the Python Language Summit 2020, [[https://pyfound.blogspot.com/2020/04/t
 2014, when Python type annotations were introduced, ten type-checking PEPs have
 been approved]].
 
-As an additional example, the Apache Beam project is quite assertive in its
-post introducing improved annotation for their Python SDK (emphasis mine):
+Please also see the type system study cited under [[#typescript-over-javascript][prefer typescript over
+javascript]].
 
-#+begin_quote
-The *importance of static type checking in a dynamically typed language like
-Python is not up for debate*. Type hints allow developers to leverage a strong
-typing system to:
+At the time of this writing, it seems that the Python ecosystem is reaching or
+perhaps has reached some sort of tipping point in terms of type annotation.
 
-- write better code,
-- self-document ambiguous programming logic, and
-- inform intelligent code completion in IDEs like PyCharm.
-#+end_quote
+For example, here is a May 8, 2021 tweet by David Lord reporting how he spent
+about two weeks type annotating several important libraries, inucludng Flask,
+Jinja and more:
 
+#+begin_export html
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Due to the complexity of the libraries, I added type annotations to Flask, Jinja, Click, Werkzeug, MarkupSafe, and ItsDangerous by hand. In total: probably 2 weeks straight of work, +9607/-6494 changes. Hit so many corner cases with typing, mypy, and our code, but it&#39;s done.</p>&mdash; David Lord (@davidism) <a href="https://twitter.com/davidism/status/1391130343286001664?ref_src=twsrc%5Etfw">May 8, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+#+end_export
 
 ** The numpydoc convention for docstrings is a good choice
 
