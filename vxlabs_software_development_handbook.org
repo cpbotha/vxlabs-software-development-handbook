@@ -524,6 +524,20 @@ after this has been discussed with the team lead, one could consider merging
 =develop= into the feature branch instead of rebasing. However, this should be
 considered a last exit.
 
+#+begin_comment
+// notes from the CLaS discord #software-development 20210609
+in my experience on bitbucket and devops, line-based comments don't get destroyed, and that is indeed usually where we comment.
+So when you add comments to a source file, do you like adding the various comments to the various bits that they relate to, or do you prefer to write one helpful comment right at the top? :wink:
+as always, I preface this with :heart: and best intentions, never forget :slight_smile:
+the main arguments I'm hearing against rebasing so far is that developers find it scary and/or annoying, that merging is easier that rebasing, and that not rebasing saves time.
+for OSS contributors, I think the dynamics are different. You're already happy that they're doing this work, so you don't want to put up any unnecessary barriers. To me that's a good reason to make rebasing optional.
+for everyone else, writing good and atomic commits, and having them all in sequence, provably results in more information. Nice demonstrator of this: git-bisect.
+also, I personally have had to go back, more than once, through git history to track down the exact origin of some or other behaviour.
+(in those cases, I was super grateful for our approach of rebasing and atomic commits)
+Squashed commits mean potentially much larger diffs, with nothing keeping that in check.
+#+end_comment
+
+
 ** Commit atomic changes and describe each one carefully
 
 Try to apply the same discipline and passion that you to do coding, to the
