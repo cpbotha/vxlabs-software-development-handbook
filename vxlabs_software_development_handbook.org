@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       0781326d-8aa5-4305-bac2-623fccb78f33
+:END:
 #+TITLE: vxlabs software development handbook
 #+DATE: 2021-05-03
 
