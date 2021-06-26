@@ -947,6 +947,11 @@ covered as well.
 To summarize: Choose Django, unless you have really good and really
 specific reasons not to do so.
 
+For more fantastic guidelines on how to use Django to write software that will
+give your startup / business the maximum number of chances at success, please
+read Alex Krupp's [[https://alexkrupp.typepad.com/sensemaking/2021/06/django-for-startup-founders-a-better-software-architecture-for-saas-startups-and-consumer-apps.html][Django for Startup Founders: A better software architecture
+for SaaS startups and consumer apps]].
+
 *** What about FastAPI?
     :PROPERTIES:
     :CUSTOM_ID: what-about-fastapi
