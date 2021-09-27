@@ -912,11 +912,16 @@ Django is the highest quality Python web-framework.
 It comes with almost all batteries included, it is exhaustively tested
 and it is well-documented.
 
-Importantly, it is quite opinionated, meaning that you don't have to
-waste time deciding on alternative solutions for aspects of your
-back-end. The solutions are already all there, and they've been
-battle-tested. However, many of these components can be swapped out if
-you really want to.
+Importantly, it is quite opinionated, meaning that you don't have to waste time
+deciding on alternative solutions for aspects of your back-end. The solutions
+are already all there, and they've been battle-tested. However, many of these
+components can be swapped out if you really want to.
+
+More subtly, but importantly, is that Django's structure and good conventions
+means that your team is working /consistently/ over the whole project, and also
+across projects.
+
+These points are nicely summarised in [[https://news.ycombinator.com/item?id=28611840][this HN comment by Nextgrid]].
 
 The Django ORM by itself is worth the price of admission.
 
