@@ -791,6 +791,26 @@ Jinja and more:
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Due to the complexity of the libraries, I added type annotations to Flask, Jinja, Click, Werkzeug, MarkupSafe, and ItsDangerous by hand. In total: probably 2 weeks straight of work, +9607/-6494 changes. Hit so many corner cases with typing, mypy, and our code, but it&#39;s done.</p>&mdash; David Lord (@davidism) <a href="https://twitter.com/davidism/status/1391130343286001664?ref_src=twsrc%5Etfw">May 8, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 #+end_export
 
+If you need some more data points to help convince folks of the added value of
+type annotation, see [[https://sethmlarson.dev/blog/2021-10-18/tests-arent-enough-case-study-after-adding-types-to-urllib3][this recent case study by the =urllib3= developers]]. Here's a
+good quote to start with:
+
+#+begin_quote
+When we originally started this journey our primary goal was to provide a good
+experience for users who wanted to use type checking tools with urllib3. We
+weren’t expecting to find and fix many defects.
+
+After all, urllib3 has over 1800 test cases, 100% test line coverage, and is
+likely some of the most pervasive third-party Python code in the solar
+system.
+
+Despite all of the above, the inclusion of type checking to our CI has yielded
+many improvements to our code that likely wouldn't have been discovered
+otherwise. For this reason we recommend projects evaluate adding type hints and
+strict type checking to their development workflow instead of relying on
+testing alone.
+#+end_quote
+
 ** The numpydoc convention for docstrings is a good choice
 
 The numpydoc convention for docstrings is a low-friction, more natural way of
